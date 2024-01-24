@@ -211,16 +211,16 @@ export const navigation = [
   {
     title: 'Get Started',
     links: [
-      { title: 'What is the RCP?', href: '/groups' },
-      { title: 'How is Knokd compliant with RCP?', href: '/messages' },
-      { title: 'Knokd listing types', href: '/quickstart' },
-      { title: 'Knokd 1-1 sharing', href: '/conversations' },
+      { title: 'Sign up as an agent', href: '/groups' },
+      { title: 'Sign up as a team', href: '/messages' },
+      { title: 'Grow your network', href: '/quickstart' },
+      { title: 'Share a listing', href: '/conversations' },
     ],
   },
   {
-    title: 'Saved searches',
+    title: 'Saved Searches',
     links: [
-      { title: 'What is the RCP?', href: '/' },
+      { title: 'Create a saved search', href: '/' },
     ],
   },
   {
