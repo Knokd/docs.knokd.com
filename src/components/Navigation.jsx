@@ -193,28 +193,77 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: 'Guides',
+    title: 'Welcome to Knokd',
     links: [
-      { title: 'Introduction', href: '/' },
-      { title: 'Quickstart', href: '/quickstart' },
-      { title: 'SDKs', href: '/sdks' },
-      { title: 'Authentication', href: '/authentication' },
-      { title: 'Pagination', href: '/pagination' },
-      { title: 'Errors', href: '/errors' },
-      { title: 'Webhooks', href: '/webhooks' },
+      { title: 'Knokd benefits', href: '/' },
+      { title: 'How does Knokd work?', href: '/quickstart' },
     ],
   },
   {
-    title: 'Resources',
+    title: 'Realtor Cooperation Policy',
     links: [
-      { title: 'Contacts', href: '/contacts' },
-      { title: 'Conversations', href: '/conversations' },
-      { title: 'Messages', href: '/messages' },
-      { title: 'Groups', href: '/groups' },
-      { title: 'Attachments', href: '/attachments' },
+      { title: 'What is the RCP?', href: '/authentication' },
+      { title: 'How is Knokd compliant with RCP?', href: '/conversations' },
+      { title: 'Knokd listing types', href: '/messages' },
+      { title: 'Knokd 1-1 sharing', href: '/groups' },
     ],
   },
+  {
+    title: 'Get Started',
+    links: [
+      { title: 'What is the RCP?', href: '/groups' },
+      { title: 'How is Knokd compliant with RCP?', href: '/messages' },
+      { title: 'Knokd listing types', href: '/quickstart' },
+      { title: 'Knokd 1-1 sharing', href: '/conversations' },
+    ],
+  },
+  {
+    title: 'Saved searches',
+    links: [
+      { title: 'What is the RCP?', href: '/' },
+    ],
+  },
+  {
+    title: 'Followers',
+    links: [
+      { title: 'Add Followers', href: '/' },
+      { title: 'Convert followers to clients', href: '/conversations' },
+      { title: 'Edit search criteria for followers', href: '/' },
+      { title: 'Follower landing page', href: '/' },
+    ],
+  },
+  {
+    title: 'Marketing Toolkit',
+    links: [
+      { title: 'Email templates', href: '/contacts' },
+      { title: 'Email signatures', href: '/conversations' },
+      { title: 'Sample content', href: '/messages' },
+      { title: 'Presentation slides', href: '/groups' },
+      { title: 'Knokd logos', href: '/attachments' },
+    ],
+  }
 ]
+// Preserve original links for reference.
+  //   title: 'Guides',
+  //   links: [
+  //     { title: 'Introduction', href: '/' },
+  //     { title: 'Quickstart', href: '/quickstart' },
+  //     { title: 'SDKs', href: '/sdks' },
+  //     { title: 'Authentication', href: '/authentication' },
+  //     { title: 'Pagination', href: '/pagination' },
+  //     { title: 'Errors', href: '/errors' },
+  //     { title: 'Webhooks', href: '/webhooks' },
+  //   ],
+  // },
+  // {
+  //   title: 'Resources',
+  //   links: [
+  //     { title: 'Contacts', href: '/contacts' },
+  //     { title: 'Conversations', href: '/conversations' },
+  //     { title: 'Messages', href: '/messages' },
+  //     { title: 'Groups', href: '/groups' },
+  //     { title: 'Attachments', href: '/attachments' },
+  //   ],
 
 export function Navigation(props) {
   return (
