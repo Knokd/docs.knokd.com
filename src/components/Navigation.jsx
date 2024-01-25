@@ -228,8 +228,8 @@ export const navigation = [
     links: [
       { title: 'Add Followers', href: '/' },
       { title: 'Convert followers to clients', href: '/conversations' },
-      { title: 'Edit search criteria for followers', href: '/' },
-      { title: 'Follower landing page', href: '/' },
+      { title: 'Edit search criteria for followers', href: '/quickstart' },
+      { title: 'Follower landing page', href: '/messages' },
     ],
   },
   {
