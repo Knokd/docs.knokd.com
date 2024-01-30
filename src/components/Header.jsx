@@ -12,6 +12,7 @@ import {
 import { useMobileNavigationStore } from '@/components/MobileNavigation'
 import { MobileSearch, Search } from '@/components/Search'
 import { ThemeToggle } from '@/components/ThemeToggle'
+import { KnokdLogo } from './KnokdLogo'
 
 function TopLevelNavItem({ href, children }) {
   return (
@@ -62,7 +63,8 @@ export const Header = forwardRef(function Header({ className }, ref) {
       <div className="flex items-center gap-5 lg:hidden">
         <MobileNavigation />
         <Link href="/" aria-label="Home">
-          <Logo className="h-6" />
+            {/* <Logo className="h-6" /> */}
+            <KnokdLogo />
         </Link>
       </div>
       <div className="flex items-center gap-5">
