@@ -3,7 +3,7 @@ import Link from "next/link"
 export function TopLevelNavItem({ primary, href, children }) {
   let classes;
   if (primary){
-    classes = "nav-btn btn__primary transition"
+    classes = "nav-btn btn__primary transition text-white"
   } else {
     classes = "nav-btn btn__outline transition"
   }
