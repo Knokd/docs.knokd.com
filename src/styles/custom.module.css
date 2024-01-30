@@ -1,0 +1,15 @@
+.nav-btn {
+  padding: 3px 30px;
+  border-radius: 6px;
+  text-wrap: nowrap;
+}
+
+.btn__outline {
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+.btn__primary {
+  background-color: #5344ed;
+  border: 2px solid #5344ed;
+}
