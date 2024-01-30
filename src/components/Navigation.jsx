@@ -257,9 +257,10 @@ export function Navigation(props) {
   return (
     <nav {...props}>
       <ul role="list">
-        <TopLevelNavItem href="/">API</TopLevelNavItem>
-        <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-        <TopLevelNavItem href="#">Support</TopLevelNavItem>
+        <div className='flex flex-col gap-4 md:hidden'> 
+          <TopLevelNavItem primary={false} href="/">Log In</TopLevelNavItem>
+          <TopLevelNavItem primary={true} href="#">Get Started</TopLevelNavItem>
+        </div>
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}
