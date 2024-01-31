@@ -1,4 +1,50 @@
-# Protocol
+# Knokd Docs
+
+Welcome to Knokd documentation!
+
+The Knokd Docs are built on top of [Protocol Tailwind UI](https://tailwindui.com/templates/protocol). In this Readme you can learn about:
+
+1. [Making changes to docs.knokd.ca](#editing-the-docs)
+1. [Running the docs app in a development environment](#protocol-template)
+
+## Editing the docs
+
+Knokd docs can be edited directly in GitHub.
+
+You will find all Knokd docs stored in the `/src/app/` folder. This application generates a static site based on the all the instances of `page.md` found in the subfolders of `/src/app/`. At this time, nested folders are not supported.
+
+### To make a change on the live site
+
+1. Navigate to the `/src/app/` folder in GitHub.
+1. Identify the section of documents you're looking for, e.g. `welcome-to-knokd`
+1. Choose the `page.md` file inside the folder that matches the URL path of the public doc. For example: The GitHub file at `/src/app/welcome-to-knokd/benefits/page.md` corresponds to the public URL `docs.knokd.ca/welcome-to-knokd/benefits`.
+1. Click the 'pencil' **edit** button.
+1. Make your changes in the `page.md` file.
+1. Click **Commit changes...**.
+
+**With the modal that pops open, follow these best practices to make your commit:**
+
+1. **Commit message** – pretend you're finishing the sentence "This commit will...", e.g. "Add a legal disclaimer to the pricing page.". Say *what* you're doing not *how* you're doing it (the commit history shows the *how*). 
+1. **Extended description** – (optional), this is a secondary message if you feel further explanation is helpful.
+1. **Commit Email** - Preferrably, select your `@knokd.com` address unless you're a third-party helper.
+1. **Important**!
+  - Do **NOT** select "Commit directly to the main branch" unless you are positive this change is safe to make and does not require a review by anyone. This option skips the pull request review process.
+  - In general, select **Create a new branch for this commit and start a pull request**. 
+  - (optional) rename the propsed branch name for the pull request. 
+  - Click **Propose changes**.
+
+**To create the pull request:**
+
+- You can "mention" co-workers you would like to have review, or make aware of, your changes by typing the `@` key to see a list within your organization. If you know their GitHub handle, you can type that in, e.g. `@dtKinger`.
+- **Add a description** of your changes, gives rationale if it's a significant change contentious topic.
+- The description box supports markdown syntax, same as the `page.md` files, or you can use the rich text editor option to format your pull request description.
+- When satisfied with your work, click **Create pull request**. 
+
+Later, when a pull request is accepted and "Merged", it will become part of the live code base, and Vercel will automatically re-build and re-deploy the site in about 2 minutes. 
+
+## Protocol Template
+
+**This section of the readme is for people with development environments set up. It is not required to make edits to the documentation.**
 
 Protocol is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
