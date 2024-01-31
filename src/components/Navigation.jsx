@@ -183,17 +183,17 @@ export const navigation = [
   {
     title: 'Welcome to Knokd',
     links: [
-      { title: 'Benefits', href: '/' },
-      { title: 'How does the app work?', href: '/quickstart' },
+      { title: 'Benefits', href: '/welcome-to-knokd/benefits' },
+      { title: 'How does the app work?', href: '/welcome-to-knokd/how-does-knokd-work' },
     ],
   },
   {
     title: 'Realtor Cooperation Policy',
     links: [
-      { title: 'What is the RCP?', href: '/authentication' },
-      { title: 'How is Knokd compliant with RCP?', href: '/conversations' },
-      { title: 'Knokd listing types', href: '/messages' },
-      { title: 'Knokd 1-1 sharing', href: '/groups' },
+      { title: 'What is the RCP?', href: '/realtor-cooperation-policy/what-is-the-rcp' },
+      { title: 'How is Knokd compliant with RCP?', href: '/realtor-cooperation-policy/how-is-knokd-compliant-with-rcp' },
+      { title: 'Knokd listing types', href: '/realtor-cooperation-policy/knokd-listing-types' },
+      { title: 'Knokd 1-1 sharing', href: '/realtor-cooperation-policy/one-to-one-sharing-1-1' },
     ],
   },
   {
