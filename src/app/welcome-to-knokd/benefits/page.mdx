@@ -21,6 +21,32 @@ export const sections = [
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Nullam vitae rutrum eros](#href), ac hendrerit augue. Morbi blandit mollis tortor eget scelerisque. Nam viverra, nisi et interdum volutpat, enim ex dignissim dolor, egestas tempor massa nibh condimentum dolor. 
 
+## Buttons
+
+See `/src/compoenents/Button.jsx`
+
+<div className="not-prose mb-16 mt-6 flex gap-3">
+  <Button href="/quickstart" arrow="right">
+    <>No variant</>
+  </Button>
+  <Button href="/sdks" variant="outline">
+    <>Outline</>
+  </Button>
+  <Button href="/sdks" variant="text">
+    <>Text Button</>
+  </Button>
+  <Button href="/sdks" variant="primary">
+    <>Primary</>
+  </Button>
+  <Button href="/sdks" variant="secondary">
+    <>Secondary</>
+  </Button>
+  <Button href="/sdks" variant="filled">
+    <>Filled</>
+  </Button>
+  
+</div>
+
 ## Making a note
 
 <Note>Remember to use a captinal 'N' when making a `<Note></Note>` in your MDX file. This contructs a React component and will generate a styled information box.</Note>
