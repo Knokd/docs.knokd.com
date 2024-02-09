@@ -57,7 +57,7 @@ export const Header = forwardRef(function Header({ className }, ref) {
       </div>
       <div className="flex items-center gap-5">
         <nav className="hidden md:block">
-          <ul role="list" className="flex items-center gap-8">
+          <ul role="list" className="flex items-center gap-[10px]">
             <ExternalCTAItem primary={false} href="https://app.knokd.com/login">Log In</ExternalCTAItem>
             <ExternalCTAItem primary={true} href="https://www.knokd.ca/get-started">Get Started</ExternalCTAItem>
           </ul>
