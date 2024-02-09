@@ -212,26 +212,26 @@ export const navigation = [
   {
     title: 'Saved Searches',
     links: [
-      { title: 'Create a saved search', href: '/' },
+      { title: 'Create a saved search', href: '/saved-searches/create-a-saved-search' },
     ],
   },
   {
     title: 'Followers',
     links: [
-      { title: 'Add Followers', href: '/' },
-      { title: 'Convert followers to clients', href: '/conversations' },
-      { title: 'Edit search criteria for followers', href: '/quickstart' },
-      { title: 'Follower landing page', href: '/messages' },
+      { title: 'Add Followers', href: '/followers/add-followers' },
+      { title: 'Convert followers to clients', href: '/followers/convert-followers-to-clients' },
+      { title: 'Edit search criteria for followers', href: '/followers/edit-search-criteria' },
+      { title: 'Follower landing page', href: '/followers/follower-landing-page' },
     ],
   },
   {
     title: 'Marketing Toolkit',
     links: [
-      { title: 'Email templates', href: '/contacts' },
-      { title: 'Email signatures', href: '/conversations' },
-      { title: 'Sample content', href: '/messages' },
-      { title: 'Presentation slides', href: '/groups' },
-      { title: 'Knokd logos', href: '/attachments' },
+      { title: 'Email templates', href: '/marketing-toolkit/email-templates' },
+      { title: 'Email signatures', href: '/marketing-toolkit/email-signatures' },
+      { title: 'Sample content', href: '/marketing-toolkit/sample-content' },
+      { title: 'Presentation slides', href: '/marketing-toolkit/presentation-slides' },
+      { title: 'Knokd logos', href: '/marketing-toolkit/knokd-logos' },
     ],
   }
 ]
