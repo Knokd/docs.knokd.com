@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { AnimatePresence, motion, useIsPresent } from 'framer-motion'
 
-import { Button } from '@/components/Button'
+// import { Button } from '@/components/Button'
 import { useIsInsideMobileNavigation } from '@/components/MobileNavigation'
 import { useSectionStore } from '@/components/SectionProvider'
 import { Tag } from '@/components/Tag'
@@ -192,17 +192,21 @@ export const navigation = [
     links: [
       { title: 'What is the RCP?', href: '/realtor-cooperation-policy/what-is-the-rcp' },
       { title: 'How is Knokd compliant with RCP?', href: '/realtor-cooperation-policy/how-is-knokd-compliant-with-rcp' },
-      { title: 'Knokd listing types', href: '/realtor-cooperation-policy/types-of-listings' },
+      { title: 'Knokd listing types', href: '/realtor-cooperation-policy/types-of-listings',
+      links: [
+        { title: "It's awesome", href: "/types-of-listings/nested-listings/awesome-page" },
+        { title: "It's fantastic", href: "/types-of-listings/nested-listings/fantastic-page" },
+      ]  },
       { title: 'Knokd 1-1 sharing', href: '/realtor-cooperation-policy/one-to-one-sharing-1-1' },
     ],
   },
   {
     title: 'Get Started',
     links: [
-      { title: 'Sign up as an agent', href: '/groups' },
-      { title: 'Sign up as a team', href: '/messages' },
-      { title: 'Grow your network', href: '/quickstart' },
-      { title: 'Share a listing', href: '/conversations' },
+      { title: 'Sign up as an agent', href: '/getting-started/sign-up-as-an-agent' },
+      { title: 'Sign up as a team', href: '/getting-started/sign-up-as-a-team' },
+      { title: 'Grow your network', href: '/getting-started/grow-your-network' },
+      { title: 'Share a listing', href: '/getting-started/share-a-listing' },
     ],
   },
   {
@@ -231,28 +235,8 @@ export const navigation = [
     ],
   }
 ]
-// Preserve original links for reference.
-  //   title: 'Guides',
-  //   links: [
-  //     { title: 'Introduction', href: '/' },
-  //     { title: 'Quickstart', href: '/quickstart' },
-  //     { title: 'SDKs', href: '/sdks' },
-  //     { title: 'Authentication', href: '/authentication' },
-  //     { title: 'Pagination', href: '/pagination' },
-  //     { title: 'Errors', href: '/errors' },
-  //     { title: 'Webhooks', href: '/webhooks' },
-  //   ],
-  // },
-  // {
-  //   title: 'Resources',
-  //   links: [
-  //     { title: 'Contacts', href: '/contacts' },
-  //     { title: 'Conversations', href: '/conversations' },
-  //     { title: 'Messages', href: '/messages' },
-  //     { title: 'Groups', href: '/groups' },
-  //     { title: 'Attachments', href: '/attachments' },
-  //   ],
 
+// Iterative approach
 export function Navigation(props) {
   return (
     <nav {...props}>
@@ -277,3 +261,44 @@ export function Navigation(props) {
     </nav>
   )
 }
+
+// Recursive build
+// export function Navigation(props) {
+//   return (
+//     <nav {...props}>
+//       <ul role="list">
+//         {/* Top-level links */}
+//         <div className='flex flex-col gap-4 md:hidden'>
+//           <TopLevelNavItem primary={false} href="/">Log In</TopLevelNavItem>
+//           <TopLevelNavItem primary={true} href="#">Get Started</TopLevelNavItem>
+//         </div>
+//         {renderNavigationGroups(navigation)}
+//       </ul>
+//     </nav>
+//   );
+// }
+
+// function renderNavigationGroups(groups) {
+//   return groups.map((group) => (
+//     <NavigationGroup
+//       key={group.title}
+//       group={group}
+//       renderLinks={renderLinksRecursively} // Use recursive function for links
+//     />
+//   ));
+// }
+
+// function renderLinksRecursively(links) {
+//   return links.map((link) => {
+//     if (link.links) {
+//       return (
+//         <li key={link.title}>
+//           <button className="group">{link.title}</button>
+//           <ul>{renderLinksRecursively(link.links)}</ul>
+//         </li>
+//       );
+//     } else {
+//       return <li key={link.href}><a href={link.href}>{link.title}</a></li>;
+//     }
+//   });
+// }
