@@ -1,21 +1,21 @@
-import Link from "next/link"
 
-export function TopLevelNavItem({ primary, href, children }) {
+
+export function ExternalCTAItem({ primary, href, children }) {
   let classes;
   if (primary){
-    classes = "nav-btn btn__primary transition text-white"
+    classes = "nav-btn btn__primary transition text-white font-robotoFlex"
   } else {
-    classes = "nav-btn btn__outline transition"
+    classes = "nav-btn btn__outline transition font-robotoFlex"
   }
   // text-sm leading-5 text-red-600 transition hover:text-zinc-900 dark:text-red-400 dark:hover:text-white
   return (
     <li>
-      <Link
+      <a
         href={href}
         className={classes}
       >
         {children}
-      </Link>
+      </a>
     </li>
   )
 }

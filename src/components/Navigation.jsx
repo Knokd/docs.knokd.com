@@ -11,7 +11,7 @@ import { useIsInsideMobileNavigation } from '@/components/MobileNavigation'
 import { useSectionStore } from '@/components/SectionProvider'
 import { Tag } from '@/components/Tag'
 import { remToPx } from '@/lib/remToPx'
-import { TopLevelNavItem } from '@/components/TopLevelNavItems'
+import { ExternalCTAItem } from '@/components/ExternalCTAItem'
 
 function useInitialValue(value, condition = true) {
   let initialValue = useRef(value).current
@@ -242,8 +242,8 @@ export function Navigation(props) {
     <nav {...props}>
       <ul role="list">
         <div className='flex flex-col gap-4 md:hidden'> 
-          <TopLevelNavItem primary={false} href="/">Log In</TopLevelNavItem>
-          <TopLevelNavItem primary={true} href="#">Get Started</TopLevelNavItem>
+          <ExternalCTAItem primary={false} href="https://app.knokd.com/login">Log In</ExternalCTAItem>
+          <ExternalCTAItem primary={true} href="https://www.knokd.ca/get-started">Get Started</ExternalCTAItem>
         </div>
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
@@ -269,8 +269,8 @@ export function Navigation(props) {
 //       <ul role="list">
 //         {/* Top-level links */}
 //         <div className='flex flex-col gap-4 md:hidden'>
-//           <TopLevelNavItem primary={false} href="/">Log In</TopLevelNavItem>
-//           <TopLevelNavItem primary={true} href="#">Get Started</TopLevelNavItem>
+//           <ExternalCTAItem primary={false} href="/">Log In</ExternalCTAItem>
+//           <ExternalCTAItem primary={true} href="#">Get Started</ExternalCTAItem>
 //         </div>
 //         {renderNavigationGroups(navigation)}
 //       </ul>

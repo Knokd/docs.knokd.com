@@ -13,7 +13,7 @@ import { useMobileNavigationStore } from '@/components/MobileNavigation'
 import { MobileSearch, Search } from '@/components/Search'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { KnokdLogo } from './KnokdLogo'
-import { TopLevelNavItem } from '@/components/TopLevelNavItems'
+import { ExternalCTAItem } from '@/components/ExternalCTAItem'
 
 export const Header = forwardRef(function Header({ className }, ref) {
   let { isOpen: mobileNavIsOpen } = useMobileNavigationStore()
@@ -58,8 +58,8 @@ export const Header = forwardRef(function Header({ className }, ref) {
       <div className="flex items-center gap-5">
         <nav className="hidden md:block">
           <ul role="list" className="flex items-center gap-8">
-            <TopLevelNavItem primary={false} href="/">Log In</TopLevelNavItem>
-            <TopLevelNavItem primary={true} href="#">Get Started</TopLevelNavItem>
+            <ExternalCTAItem primary={false} href="https://app.knokd.com/login">Log In</ExternalCTAItem>
+            <ExternalCTAItem primary={true} href="https://www.knokd.ca/get-started">Get Started</ExternalCTAItem>
           </ul>
         </nav>
         <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />

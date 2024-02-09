@@ -25,6 +25,9 @@ module.exports = {
     },
     typography: typographyStyles,
     extend: {
+      fontFamily: {
+        robotoFlex: ['Roboto Flex', 'sans-serif'],
+      },
       boxShadow: {
         glow: '0 0 4px rgb(0 0 0 / 0.1)',
       },
