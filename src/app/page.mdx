@@ -1,6 +1,7 @@
 import { Guides } from '@/components/Guides'
 import { Resources } from '@/components/Resources'
 import { HeroPattern } from '@/components/HeroPattern'
+import { Screenshot } from '@/components/Screenshot'
 
 export const metadata = {
   title: 'Welcome to Knokd',
@@ -10,7 +11,7 @@ export const metadata = {
 
 export const sections = [
   { title: 'Welcome to Knokd', id: '' },
-  { title: 'How does Knokd work?', id: 'resources' },
+  { title: 'How Knokd works', id: 'resources' },
 ]
 
 <HeroPattern />
@@ -18,6 +19,15 @@ export const sections = [
 # Welcome to Knokd
 
 Use the Protocol API to access contacts, conversations, group messages, and more and seamlessly integrate your product into the workflows of dozens of devoted Protocol users. {{ className: 'lead' }}
+
+<Screenshot 
+  src="/images/screenshots/welcome-to-knokd/welcome-screen-overlay.jpg"
+  alt="Showcasing both the deskptop and mobile view of Knokd Listings page"
+/>
+<Screenshot 
+  mobile="true"
+  src="/images/screenshots/welcome-to-knokd/narrow-image.png"
+  alt="Testing a mobile images" />
 
 <div className="not-prose mb-16 mt-6 flex gap-3">
   <Button href="/quickstart" arrow="right">
