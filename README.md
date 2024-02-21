@@ -22,7 +22,7 @@ Welcome to Knokd
   |_ ## Notes
   |_ ## Properties
   |_ ## Libraries
-|_ # How does Knokd work?
+|_ # How Knokd works
   |_ ...
   |_ ...
 Realtor Cooperation Policy
