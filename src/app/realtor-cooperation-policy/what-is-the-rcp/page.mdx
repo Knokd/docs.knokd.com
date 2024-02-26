@@ -1,7 +1,4 @@
-import { Guides } from '@/components/Guides'
-import { Resources } from '@/components/Resources'
-import { HeroPattern } from '@/components/HeroPattern'
-import { Libraries } from '@/components/Libraries'
+
 
 export const metadata = {
   title: 'About the RCP',
@@ -10,57 +7,54 @@ export const metadata = {
 }
 
 export const sections = [
+  { title: 'Official RCP policy', id: 'official-rcp-policy' },
+  { title: 'Unique listing strategies', id: 'offer-unique-listing-strategies' },
+  { title: 'Increase listing exposure', id: 'increase-your-listings-exposure' },
 ]
 
-# About the Realtor Cooperation Policy?
+# Realtor Cooperation Policy
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Nullam vitae rutrum eros](#href), ac hendrerit augue. Morbi blandit mollis tortor eget scelerisque. Nam viverra, nisi et interdum volutpat, enim ex dignissim dolor, egestas tempor massa nibh condimentum dolor. 
+Realtor Cooperation Policy (RCP) is a policy implemented by the Canadian Realtor Estate Association (CREA) in Canada. It mandates that all residential listings are placed on a Multiple Listing Service (MLS) after 72 hours of the property being marketed publicly.
 
-## Making a note
+## Official RCP policy
 
-<Note>Remember to use a captinal 'N' when making a `<Note></Note>` in your MDX file. This contructs a React component and will generate a styled information box.</Note>
+Here is the official policy provided by CREA.
 
-## Properties
+### Public Marketing
 
-Though this is made for APIs, there may be some tags or properties you'd like to style similarly. Here, use the `<Properties />` warpper with `<Property />`  fields:
+The RCP defines public marketing as representation or marketing of a listing to the public or
+anyone not directly affiliated with the listing brokerage/office in a business capacity. This includes, but is not limited to:
+* flyers
+* yard signs
+* digital marketing on public facing websites
+* brokerage website displays (including IDX and VOW) and onsite brokerage promotion
+* digital communications marketing (i.e., email blasts, newsletters, social media posts)
+* multi-brokerage listing sharing networks with indiscriminate sharing
+* applications available to the general public.
 
-### Examples of Properties
+### What isn't Public Marketing?
 
-<Properties>
-  <Property name="id" type="string">
-    Unique identifier for the contact.
-  </Property>
-  <Property name="last_active_at" type="timestamp">
-    Timestamp of when the contact was last active on the platform.
-  </Property>
-</Properties>
+The following practices are **not** considered public marketing according the RCP:
 
-## Including Components
+* Representing or marketing a listing to anyone that is directly affiliated with the listing brokerage / office in a business capacity. Examples of this are brokerage agents, employees, clients and potential clients.
+* 1-1 direct communication with a Realtor unaffiliated with the listing brokerage.
 
-MDX files are designed for the component era of the web. You can import components at the top of a file ^^^ and then include them like so: `<Guides />`, or `<Resources />`.
+## Knokd's RCP Compliance
 
-<Guides />
+Knokd is carefully designed around the RCP, and this is evident in multiple features:
 
-<Resources />
+### Unlimited sharing in your brokerage
 
-## Code highlighting:
+Knokd creates an internal network for your brokerage, where all listings can be shared without restriction for any duration of time.
 
-Use a `<CodeGroup />` component and include a label between `{{ }}`. Use `title` to label something freely, use `language` for programming languages.
+### 1-to-1 external sharing with your contracts
 
-<CodeGroup>
+Listings can be shared via Knokd’s 1-1 sharing feature with agents outside your brokerage & those who have search criteria that match your listing.
 
-```bash {{ title: 'cURL' }}
-# cURL is most likely already installed on your machine
-curl --version
-```
+### 72 hour public sharing with your local community
 
-```js {{ language: 'js' }}
-console.log('hello world')
-```
-</CodeGroup>
+Within 72 hours of an MLS listing launch date, listings will be shared publicly across the local community for maximum exposure.
 
-## Libraries
+### Business relationships with clients & prospects
 
-Include a list of resources, loaded from an array of objects or other JSON data source. Load the component with `<Libraries />`:
-
-<Libraries />
+When a client accepts your invitation to Knokd, they are consenting to a business relationship with you, enabling them to join your sharing network.
