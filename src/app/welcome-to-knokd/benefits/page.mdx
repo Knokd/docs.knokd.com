@@ -1,7 +1,7 @@
-import { Guides } from '@/components/Guides'
-import { Resources } from '@/components/Resources'
-import { HeroPattern } from '@/components/HeroPattern'
-import { Libraries } from '@/components/Libraries'
+import { BookIcon } from "@/components/icons/BookIcon"
+import { CheckIcon } from "@/components/icons/CheckIcon"
+import { ClipboardIcon } from "@/components/icons/ClipboardIcon"
+import { SquaresPlusIcon } from "@/components/icons/SquaresPlusIcon"
 
 export const metadata = {
   title: 'Benefits',
@@ -10,88 +10,36 @@ export const metadata = {
 }
 
 export const sections = [
-  { title: 'Notes', id: 'making-a-note' },
-  { title: 'Properties', id: 'properties' },
-  { title: 'Including Components', id: 'including-components' },
-  { title: 'Code highlighting', id: 'code-highlighting' },
-  { title: 'Libraries', id: 'libraries' },
+  { title: 'Win more clients', id: 'win-more-clients' },
+  { title: 'Unique listing strategies', id: 'offer-unique-listing-strategies' },
+  { title: 'Increase listing exposure', id: 'increase-your-listings-exposure' },
 ]
 
 # Benefits
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Nullam vitae rutrum eros](#href), ac hendrerit augue. Morbi blandit mollis tortor eget scelerisque. Nam viverra, nisi et interdum volutpat, enim ex dignissim dolor, egestas tempor massa nibh condimentum dolor. 
+If you're just getting started with Knokd, here are some examples of what the app can do for you after setup. 
 
-## Buttons
-
-See `/src/compoenents/Button.jsx`
-
-<div className="not-prose mb-16 mt-6 flex gap-3">
-  <Button href="/quickstart" arrow="right">
-    <>No variant</>
-  </Button>
-  <Button href="/sdks" variant="outline">
-    <>Outline</>
-  </Button>
-  <Button href="/sdks" variant="text">
-    <>Text Button</>
-  </Button>
-  <Button href="/sdks" variant="primary">
-    <>Primary</>
-  </Button>
-  <Button href="/sdks" variant="secondary">
-    <>Secondary</>
-  </Button>
-  <Button href="/sdks" variant="filled">
-    <>Filled</>
-  </Button>
-  
+<div className="flex items-center gap-2">
+<CheckIcon className="mt-12 h-8 w-8 fill-indigo-500/20 stroke-indigo-500 transition-colors group-hover/button:stroke-indigo-400" /> 
+## Win more clients
 </div>
 
-## Making a note
 
-<Note>Remember to use a captinal 'N' when making a `<Note></Note>` in your MDX file. This contructs a React component and will generate a styled information box.</Note>
+Clients love to get access to properties that aren’t available to the public. Honestly, who wouldn’t want that? We make it easy for your clients and potential clients to feel like VIPs with access to properties that are not available on the MLS. 
 
-## Properties
+<div className="flex items-center gap-2">
+<ClipboardIcon className="mt-12 h-8 w-8 fill-indigo-500/20 stroke-indigo-500 transition-colors group-hover/button:stroke-indigo-400" /> 
+## Offer unique listing strategies
+</div>
 
-Though this is made for APIs, there may be some tags or properties you'd like to style similarly. Here, use the `<Properties />` warpper with `<Property />`  fields:
 
-### Examples of Properties
+In many cases, a potential seller's reluctance or uncertainty about the market or their property may restrict them and their property to being not-for-sale. But what if they could quickly and easily sign with you to get a risk-free look at how their property could sell in the off-market agent network?
 
-<Properties>
-  <Property name="id" type="string">
-    Unique identifier for the contact.
-  </Property>
-  <Property name="last_active_at" type="timestamp">
-    Timestamp of when the contact was last active on the platform.
-  </Property>
-</Properties>
+Help your clients move from not-for-sale to open-minded with Knokd.
 
-## Including Components
+<div className="flex items-center gap-2">
+<SquaresPlusIcon className="mt-12 h-8 w-8 fill-indigo-500/20 stroke-indigo-500 transition-colors group-hover/button:stroke-indigo-400" /> 
+## Increase your listings exposure
+</div>
 
-MDX files are designed for the component era of the web. You can import components at the top of a file ^^^ and then include them like so: `<Guides />`, or `<Resources />`.
-
-<Guides />
-
-<Resources />
-
-## Code highlighting:
-
-Use a `<CodeGroup />` component and include a label between `{{ }}`. Use `title` to label something freely, use `language` for programming languages.
-
-<CodeGroup>
-
-```bash {{ title: 'cURL' }}
-# cURL is most likely already installed on your machine
-curl --version
-```
-
-```js {{ language: 'js' }}
-console.log('hello world')
-```
-</CodeGroup>
-
-## Libraries
-
-Include a list of resources, loaded from an array of objects or other JSON data source. Load the component with `<Libraries />`:
-
-<Libraries />
+Whether it’s a coming soon or exclusive property, Knokd is built to maximise your listings exposure in your local agent community while remaining RCP compliant.
