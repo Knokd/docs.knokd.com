@@ -4,17 +4,48 @@ import { HeroPattern } from '@/components/HeroPattern'
 import { Libraries } from '@/components/Libraries'
 
 export const metadata = {
-  title: 'How Knokd works',
+  title: 'Benefits',
   description:
     'meta description goes here',
 }
 
 export const sections = [
+  { title: 'Notes', id: 'making-a-note' },
+  { title: 'Properties', id: 'properties' },
+  { title: 'Including Components', id: 'including-components' },
+  { title: 'Code highlighting', id: 'code-highlighting' },
+  { title: 'Libraries', id: 'libraries' },
 ]
 
-# How Knokd works
+# Benefits
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Nullam vitae rutrum eros](#href), ac hendrerit augue. Morbi blandit mollis tortor eget scelerisque. Nam viverra, nisi et interdum volutpat, enim ex dignissim dolor, egestas tempor massa nibh condimentum dolor. 
+
+## Buttons
+
+See `/src/compoenents/Button.jsx`
+
+<div className="not-prose mb-16 mt-6 flex gap-3">
+  <Button href="/quickstart" arrow="right">
+    <>No variant</>
+  </Button>
+  <Button href="/sdks" variant="outline">
+    <>Outline</>
+  </Button>
+  <Button href="/sdks" variant="text">
+    <>Text Button</>
+  </Button>
+  <Button href="/sdks" variant="primary">
+    <>Primary</>
+  </Button>
+  <Button href="/sdks" variant="secondary">
+    <>Secondary</>
+  </Button>
+  <Button href="/sdks" variant="filled">
+    <>Filled</>
+  </Button>
+  
+</div>
 
 ## Making a note
 

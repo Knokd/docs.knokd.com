@@ -184,43 +184,39 @@ export const navigation = [
     title: 'Welcome to Knokd',
     links: [
       { title: 'Benefits', href: '/welcome-to-knokd/benefits' },
-      { title: 'How does the app work?', href: '/welcome-to-knokd/how-does-knokd-work' },
+      { title: 'How Knokd works', href: '/welcome-to-knokd/how-does-knokd-work' },
     ],
   },
   {
     title: 'Realtor Cooperation Policy',
     links: [
-      { title: 'What is the RCP?', href: '/realtor-cooperation-policy/what-is-the-rcp' },
-      { title: 'How is Knokd compliant with RCP?', href: '/realtor-cooperation-policy/how-is-knokd-compliant-with-rcp' },
-      { title: 'Knokd listing types', href: '/realtor-cooperation-policy/types-of-listings',
-      links: [
-        { title: "It's awesome", href: "/types-of-listings/nested-listings/awesome-page" },
-        { title: "It's fantastic", href: "/types-of-listings/nested-listings/fantastic-page" },
-      ]  },
+      { title: 'About the RCP', href: '/realtor-cooperation-policy/what-is-the-rcp' },
+      { title: 'Knokd compliance with RCP', href: '/realtor-cooperation-policy/how-is-knokd-compliant-with-rcp' },
+      { title: 'Listing types', href: '/realtor-cooperation-policy/types-of-listings'},
       { title: 'Knokd 1-1 sharing', href: '/realtor-cooperation-policy/one-to-one-sharing-1-1' },
     ],
   },
   {
-    title: 'Get Started',
+    title: 'Getting Started',
     links: [
-      { title: 'Sign up as an agent', href: '/getting-started/sign-up-as-an-agent' },
-      { title: 'Sign up as a team', href: '/getting-started/sign-up-as-a-team' },
-      { title: 'Grow your network', href: '/getting-started/grow-your-network' },
-      { title: 'Share a listing', href: '/getting-started/share-a-listing' },
+      { title: 'Signing up as an agent', href: '/getting-started/sign-up-as-an-agent' },
+      { title: 'Signing up as a team', href: '/getting-started/sign-up-as-a-team' },
+      { title: 'Growing your network', href: '/getting-started/grow-your-network' },
+      { title: 'Sharing a listing', href: '/getting-started/share-a-listing' },
     ],
   },
   {
     title: 'Saved Searches',
     links: [
-      { title: 'Create a saved search', href: '/saved-searches/create-a-saved-search' },
+      { title: 'Creating a saved search', href: '/saved-searches/create-a-saved-search' },
     ],
   },
   {
     title: 'Followers',
     links: [
-      { title: 'Add Followers', href: '/followers/add-followers' },
-      { title: 'Convert followers to clients', href: '/followers/convert-followers-to-clients' },
-      { title: 'Edit search criteria for followers', href: '/followers/edit-search-criteria' },
+      { title: 'Adding Followers', href: '/followers/add-followers' },
+      { title: 'Converting followers to clients', href: '/followers/convert-followers-to-clients' },
+      { title: 'Editing search criteria', href: '/followers/edit-search-criteria' },
       { title: 'Follower landing page', href: '/followers/follower-landing-page' },
     ],
   },

@@ -1,6 +1,10 @@
 import { Guides } from '@/components/Guides'
 import { Resources } from '@/components/Resources'
 import { HeroPattern } from '@/components/HeroPattern'
+import { Screenshot } from '@/components/Screenshot'
+import { BookIcon } from '@/components/icons/BookIcon'
+import { MapPinIcon } from '@/components/icons/MapPinIcon'
+import { FaceSmileIcon } from '@/components/icons/FaceSmileIcon'
 
 export const metadata = {
   title: 'Welcome to Knokd',
@@ -10,33 +14,40 @@ export const metadata = {
 
 export const sections = [
   { title: 'Welcome to Knokd', id: '' },
-  { title: 'How does Knokd work?', id: 'resources' },
+  { title: 'How Knokd works', id: 'resources' },
 ]
 
 <HeroPattern />
 
 # Welcome to Knokd
 
-Use the Protocol API to access contacts, conversations, group messages, and more and seamlessly integrate your product into the workflows of dozens of devoted Protocol users. {{ className: 'lead' }}
+Knokd gives realtors a new competitive edge for off-market listings. Knokd is an off-market platform, built with [RCP compliance](/realtor-cooperation-policy/what-is-the-rcp), for agents - by agents.  {{ className: 'lead' }}
 
-<div className="not-prose mb-16 mt-6 flex gap-3">
-  <Button href="/quickstart" arrow="right">
-    <>Quickstart</>
-  </Button>
-  <Button href="/sdks" variant="outline">
-    <>Explore SDKs</>
-  </Button>
-</div>
+<Screenshot 
+  src="/images/screenshots/welcome-to-knokd/welcome-screen-overlay.jpg"
+  alt="Showcasing both the deskptop and mobile view of Knokd Listings page"
+/>
 
-## Getting started {{ anchor: false }}
+<h2 className="flex gap-2 items-center text-2xl">
+  <MapPinIcon className="h-8 w-8 fill-indigo-500/20 stroke-indigo-500 transition-colors group-hover/button:stroke-indigo-400" /> 
+  Off-market platform
+</h2>
 
-To get started, create a new application in your [developer settings](#), then read about how to make requests for the resources you need to access using our HTTP APIs or dedicated client SDKs. When your integration is ready to go live, publish it to our [integrations directory](#) to reach the Protocol community. {{ className: 'lead' }}
+Knokd is an agent-only tool that lets you share exclusive and coming soon listings. These may include residential, assignment, new build or multi-unit residential listings. 
 
-<div className="not-prose">
-  <Button href="/sdks" variant="text" arrow="right">
-    <>Get your API key</>
-  </Button>
-</div>
+<h2 className="flex gap-2 items-center text-2xl">
+  <BookIcon className="h-8 w-8 fill-indigo-500/20 stroke-indigo-500 transition-colors group-hover/button:stroke-indigo-400" /> 
+  Built for the RCP
+</h2>
+
+We are built for the [Realtor Cooperation Policy (RCP)](/realtor-cooperation-policy/what-is-the-rcp). We help you categorise your listings and share them compliantly. This may be internally within your brokerage, via 1–1 share, or across our network when permitted.
+
+<h2 className="flex gap-2 items-center text-2xl">
+  <FaceSmileIcon className="h-8 w-8 fill-indigo-500/20 stroke-indigo-500 transition-colors group-hover/button:stroke-indigo-400" /> 
+  For agents, by agents
+</h2>
+
+We believe that buying a home with an experienced agent leads to the best results for clients, and our mission is to provide agents with tools to leverage their advantage over online portals. 
 
 <Guides />
 

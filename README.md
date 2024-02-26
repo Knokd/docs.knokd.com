@@ -6,6 +6,7 @@ The Knokd Docs are built on top of [Protocol Tailwind UI](https://tailwindui.com
 
 1. [Limits of the information architecture](#information-architecture)
 1. [Making changes to docs.knokd.ca](#editing-the-docs)
+1. [Using screenshots](#using-screenshots)
 1. [Running the docs app in a development environment](#protocol-template)
 
 ## Information Architecture
@@ -22,7 +23,7 @@ Welcome to Knokd
   |_ ## Notes
   |_ ## Properties
   |_ ## Libraries
-|_ # How does Knokd work?
+|_ # How Knokd works
   |_ ...
   |_ ...
 Realtor Cooperation Policy
@@ -38,6 +39,7 @@ The lowest level, e.g. "Notes" is a section on the Benefits page, not it's own p
 Knokd docs can be edited directly in GitHub.
 
 You will find all Knokd docs stored in the `/src/app/` folder. This application generates a static site based on the all the instances of `page.mdx` found in the subfolders of `/src/app/`.
+
 
 ### To make a change on the live site
 
@@ -69,6 +71,41 @@ For example: The GitHub file at `/src/app/realtor-cooperation-policy/types-of-li
 - When satisfied with your work, click **Create pull request**. 
 
 Later, when a pull request is accepted and "Merged", it will become part of the live code base, and Vercel will automatically re-build and re-deploy the site in about 2 minutes. 
+
+### Using Screenshots
+
+I made a custom component to handle screenshots. It has two implementations - one for desktop and one for mobile. Use the 'mobile flag' to limit the width of the image container. This is recommended if the source image has a narrow format, e.g. from a mobile screen capture. 
+
+To include a screenshot in a doc page:
+1. Place all screenshots in the `/public/images/screenshots/` folder, or within a well-named subfolder there.
+1. At the top of the page.mdx, make sure to import the Screenshot component with:
+```
+import { Screenshot } from '@/components/Screenshot'
+```
+1. In the content of your `page.mdx`, open a `<Screenshot ` component, include an image `src` and `alt` attributes before the closing `/>` tag. 
+
+**Desktop screenshots:**
+
+```
+<Screenshot 
+  src="/images/screenshots/welcome-to-knokd/welcome-screen-overlay.jpg"
+  alt="Showcasing both the deskptop and mobile view of Knokd Listings page"
+/>
+```
+
+![](/readme-images/desktop-example.png)
+
+**Mobile screenshots:**
+Add the flag / attribute `mobile={true}` to invoke the limited width (380px)
+
+```
+<Screenshot 
+  mobile={true}
+  src="/images/screenshots/welcome-to-knokd/narrow-image.png"
+  alt="Testing a mobile images" />
+```
+
+![](/readme-images/mobile-example.png)
 
 ## Protocol Template
 
