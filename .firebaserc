@@ -1,15 +1,5 @@
 {
   "projects": {
     "default": "knokd-docs"
-  },
-  "targets": {
-    "knokd-docs": {
-      "hosting": {
-        "live": [
-          "knokd-docs"
-        ]
-      }
-    }
-  },
-  "etags": {}
+  }
 }
