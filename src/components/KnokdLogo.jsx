@@ -5,9 +5,6 @@ import LogoNoBg from '../../public/images/knokd-logo-xl.png';
 
 export function KnokdLogo () {
   const { resolvedTheme } = useTheme();
-  const imageStyle = {
-    minWidth: '124px'
-  }
   
   return (
     <picture>
@@ -19,9 +16,9 @@ export function KnokdLogo () {
       <Image
         priority={true}
         src={LogoNoBg}
-        width={124}
-        style={imageStyle}
-        height={undefined}
+        width={undefined}
+        style={{minWidth: 79}}
+        height={28}
         alt="Knokd's company logo"
       />
     </picture>
