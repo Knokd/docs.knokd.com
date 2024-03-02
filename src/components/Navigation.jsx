@@ -237,10 +237,10 @@ export function Navigation(props) {
   return (
     <nav {...props}>
       <ul role="list">
-        <div className='flex flex-col gap-4 md:hidden'> 
+        {/* <div className='flex flex-col gap-4 md:hidden'> 
           <ExternalCTAItem primary={false} href="https://app.knokd.com/login">Log In</ExternalCTAItem>
           <ExternalCTAItem primary={true} href="https://www.knokd.ca/get-started">Get Started</ExternalCTAItem>
-        </div>
+        </div> */}
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}
