@@ -191,9 +191,8 @@ export const navigation = [
     title: 'Realtor Cooperation Policy',
     links: [
       { title: 'About the RCP', href: '/realtor-cooperation-policy/what-is-the-rcp' },
-      { title: 'Knokd compliance with RCP', href: '/realtor-cooperation-policy/how-is-knokd-compliant-with-rcp' },
-      { title: 'Listing types', href: '/realtor-cooperation-policy/types-of-listings'},
-      { title: 'Knokd 1-1 sharing', href: '/realtor-cooperation-policy/one-to-one-sharing-1-1' },
+      { title: 'Knokd listing types', href: '/realtor-cooperation-policy/types-of-listings'},
+      { title: 'Knokd 1-1 sharing', href: '/realtor-cooperation-policy/1-1-sharing' },
     ],
   },
   {
