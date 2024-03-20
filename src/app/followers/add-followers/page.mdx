@@ -10,57 +10,56 @@ export const metadata = {
 }
 
 export const sections = [
+  { title: 'Sign-up link', id: 'sign-up-link' },
+  { title: "Invite a follower", id: "invite-a-follower" },
+  { title: "Add a follower", id: "add-a-follower" }
 ]
 
-# Add followers
+<HeroPattern />
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Nullam vitae rutrum eros](#href), ac hendrerit augue. Morbi blandit mollis tortor eget scelerisque. Nam viverra, nisi et interdum volutpat, enim ex dignissim dolor, egestas tempor massa nibh condimentum dolor. 
+# Adding followers
 
-## Making a note
+A follower is a potential client that is involved with you in a business capacity. They have the ability to create searches and receive notifications on Knokd properties that meet their search criteria.
 
-<Note>Remember to use a captinal 'N' when making a `<Note></Note>` in your MDX file. This contructs a React component and will generate a styled information box.</Note>
+### Did you know?
 
-## Properties
+<Note>Sharing listing properties with followers is not considered public marketing because they are involved with your brokerage in a business capacity. </Note>
 
-Though this is made for APIs, there may be some tags or properties you'd like to style similarly. Here, use the `<Properties />` warpper with `<Property />`  fields:
+There are three ways to signup a follower.
 
-### Examples of Properties
+## Sign-up link
 
-<Properties>
-  <Property name="id" type="string">
-    Unique identifier for the contact.
-  </Property>
-  <Property name="last_active_at" type="timestamp">
-    Timestamp of when the contact was last active on the platform.
-  </Property>
-</Properties>
+Every agent in Knokd has their own public signup link. To obtain your sign-up link:
 
-## Including Components
+1. [Login](https://www.knokd.com/login) to Knokd.
+2. Click "Followers" in the left hand navigation.
+3. Click "Copy sign up link".
+4. Done - Ctrl + P for the link.
 
-MDX files are designed for the component era of the web. You can import components at the top of a file ^^^ and then include them like so: `<Guides />`, or `<Resources />`.
+When a follower signs up with the link, they will be asked to
 
-<Guides />
+* Accept the Terms & Conditions indicating a business relationship with the agent. 
+* Setup a search
+* Set their notification preferences
 
-<Resources />
+## Invite a follower
 
-## Code highlighting:
+You can also invite follower via email. To do this:
 
-Use a `<CodeGroup />` component and include a label between `{{ }}`. Use `title` to label something freely, use `language` for programming languages.
+1. [Login](https://www.knokd.com/login) to Knokd.
+2. Click "Followers" in the left hand navigation.
+3. Click "Send invite".
+4. Enter the email address of the follower you'd like to invite.
 
-<CodeGroup>
+The follower will receive an invite via email which will take them to the signup link.
 
-```bash {{ title: 'cURL' }}
-# cURL is most likely already installed on your machine
-curl --version
-```
+## Add a follower
 
-```js {{ language: 'js' }}
-console.log('hello world')
-```
-</CodeGroup>
+You can also manually add a follower and setup a search for them.
 
-## Libraries
+1. [Login](https://www.knokd.com/login) to Knokd.
+2. Click "Followers" in the left hand navigation.
+3. Click "Add follower".
+4. Enter in their details. 
 
-Include a list of resources, loaded from an array of objects or other JSON data source. Load the component with `<Libraries />`:
-
-<Libraries />
+You can now [create a search](http://localhost:3000/saved-searches/create-a-saved-search) and assign them.

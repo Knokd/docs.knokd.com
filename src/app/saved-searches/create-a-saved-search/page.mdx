@@ -10,57 +10,36 @@ export const metadata = {
 }
 
 export const sections = [
+  { title: 'Creating searches', id: 'creating-searches' },
+  { title: "Editing searches", id: "editing-searches" }
 ]
+
+<HeroPattern />
 
 # Create a saved search
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Nullam vitae rutrum eros](#href), ac hendrerit augue. Morbi blandit mollis tortor eget scelerisque. Nam viverra, nisi et interdum volutpat, enim ex dignissim dolor, egestas tempor massa nibh condimentum dolor. 
+In Knokd, you can create and save searches for yourself and for your clients. Both start in the same place.
 
-## Making a note
+## Creating searches
 
-<Note>Remember to use a captinal 'N' when making a `<Note></Note>` in your MDX file. This contructs a React component and will generate a styled information box.</Note>
+1. [Login](https://www.knokd.com/login) to Knokd.
+2. Go to "Searches" in the left navigation.
+3. Click “Create new search”
+4. Enter the criteria for your search. 
+5. If the search is for yourself, you're done.
+6. It it’s for a follower or a client, then click on the search you just created.
+7. See "Assign follower" in the right hand corner.
+8. Toggle "Assign search to a follow" on.
+9. Select the follower you'd like to assign the search to. You will need to create the follower if you haven't already.
+10. Click "Save search".
 
-## Properties
+## Editing searches
 
-Though this is made for APIs, there may be some tags or properties you'd like to style similarly. Here, use the `<Properties />` warpper with `<Property />`  fields:
+Directly editing search is not currently supported in Knokd. To change your search:
 
-### Examples of Properties
-
-<Properties>
-  <Property name="id" type="string">
-    Unique identifier for the contact.
-  </Property>
-  <Property name="last_active_at" type="timestamp">
-    Timestamp of when the contact was last active on the platform.
-  </Property>
-</Properties>
-
-## Including Components
-
-MDX files are designed for the component era of the web. You can import components at the top of a file ^^^ and then include them like so: `<Guides />`, or `<Resources />`.
-
-<Guides />
-
-<Resources />
-
-## Code highlighting:
-
-Use a `<CodeGroup />` component and include a label between `{{ }}`. Use `title` to label something freely, use `language` for programming languages.
-
-<CodeGroup>
-
-```bash {{ title: 'cURL' }}
-# cURL is most likely already installed on your machine
-curl --version
-```
-
-```js {{ language: 'js' }}
-console.log('hello world')
-```
-</CodeGroup>
-
-## Libraries
-
-Include a list of resources, loaded from an array of objects or other JSON data source. Load the component with `<Libraries />`:
-
-<Libraries />
+1. [Login](https://www.knokd.com/login) to Knokd.
+2. Click on "Searches" in the left navigation.
+3. Click the search you need to edit.
+4. Click "Edit search" button near the tittle.
+5. Make your edit.
+6. Click "Save Search"

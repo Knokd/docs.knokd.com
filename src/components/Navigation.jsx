@@ -201,22 +201,19 @@ export const navigation = [
       { title: 'Signing up as an agent', href: '/getting-started/sign-up-as-an-agent' },
       { title: 'Signing up as a team', href: '/getting-started/sign-up-as-a-team' },
       { title: 'Growing your network', href: '/getting-started/grow-your-network' },
-      { title: 'Sharing a listing', href: '/getting-started/share-a-listing' },
+      { title: 'Create a listing', href: '/getting-started/create-a-listing' },
     ],
   },
   {
     title: 'Saved Searches',
     links: [
-      { title: 'Creating a saved search', href: '/saved-searches/create-a-saved-search' },
+      { title: 'Searches', href: '/saved-searches/create-a-saved-search' },
     ],
   },
   {
     title: 'Followers',
     links: [
-      { title: 'Adding Followers', href: '/followers/add-followers' },
-      { title: 'Converting followers to clients', href: '/followers/convert-followers-to-clients' },
-      { title: 'Editing search criteria', href: '/followers/edit-search-criteria' },
-      { title: 'Follower landing page', href: '/followers/follower-landing-page' },
+      { title: 'Adding Followers', href: '/followers/add-followers' }
     ],
   },
   {
