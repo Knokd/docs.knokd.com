@@ -216,16 +216,16 @@ export const navigation = [
       { title: 'Adding Followers', href: '/followers/add-followers' }
     ],
   },
-  {
-    title: 'Marketing Toolkit',
-    links: [
-      { title: 'Email templates', href: '/marketing-toolkit/email-templates' },
-      { title: 'Email signatures', href: '/marketing-toolkit/email-signatures' },
-      { title: 'Sample content', href: '/marketing-toolkit/sample-content' },
-      { title: 'Presentation slides', href: '/marketing-toolkit/presentation-slides' },
-      { title: 'Knokd logos', href: '/marketing-toolkit/knokd-logos' },
-    ],
-  }
+//  {
+//    title: 'Marketing Toolkit',
+//    links: [
+//      { title: 'Email templates', href: '/marketing-toolkit/email-templates' },
+//      { title: 'Email signatures', href: '/marketing-toolkit/email-signatures' },
+//      { title: 'Sample content', href: '/marketing-toolkit/sample-content' },
+//      { title: 'Presentation slides', href: '/marketing-toolkit/presentation-slides' },
+//      { title: 'Knokd logos', href: '/marketing-toolkit/knokd-logos' },
+//    ],
+//  }
 ]
 
 // Iterative approach
