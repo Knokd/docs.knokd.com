@@ -211,9 +211,9 @@ export const navigation = [
     ],
   },
   {
-    title: 'Followers',
+    title: 'Contacts',
     links: [
-      { title: 'Adding Followers', href: '/followers/add-followers' }
+      { title: 'Adding Contacts', href: '/contacts/add-contacts' }
     ],
   },
 //  {
