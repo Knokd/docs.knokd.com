@@ -7,8 +7,8 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - Protocol API Reference',
-    default: 'Protocol API Reference',
+    template: '%s - Knokd Help Center',
+    default: 'Knokd Help Center',
   },
 }
 

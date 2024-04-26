@@ -191,8 +191,6 @@ export const navigation = [
     title: 'Realtor Cooperation Policy',
     links: [
       { title: 'About the RCP', href: '/realtor-cooperation-policy/what-is-the-rcp' },
-      { title: 'Knokd listing types', href: '/realtor-cooperation-policy/types-of-listings'},
-      { title: 'Knokd 1-1 sharing', href: '/realtor-cooperation-policy/1-1-sharing' },
     ],
   },
   {
@@ -201,7 +199,15 @@ export const navigation = [
       { title: 'Signing up as an agent', href: '/getting-started/sign-up-as-an-agent' },
       { title: 'Signing up as a team', href: '/getting-started/sign-up-as-a-team' },
       { title: 'Growing your network', href: '/getting-started/grow-your-network' },
-      { title: 'Create a listing', href: '/getting-started/create-a-listing' },
+    ],
+  },
+  {
+    title: 'Listings',
+    links: [
+      { title: 'Create a listing', href: '/listings/create-a-listing' },
+      { title: 'Sharing link', href: '/listings/sharing-link' },
+      { title: '1-to-1 sharing', href: '/listings/1-1-sharing' },
+      { title: 'Listing types', href: '/listings/types-of-listings'},
     ],
   },
   {
