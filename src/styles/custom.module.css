@@ -60,7 +60,7 @@
 
 .table-col-2 {
   height: 100px;
-  width: clamp(200px, 320px, 390px);
+  width: clamp(200px, 230px, 390px);
   vertical-align: middle;
   text-align: center;
 }
