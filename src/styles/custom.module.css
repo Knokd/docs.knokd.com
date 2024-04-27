@@ -72,6 +72,10 @@
   text-align: center;
 }
 
+.col-left {
+  border-right: 1px solid black;
+}
+
 /* The 'fake' left table-column items */
 .col-left div {
   padding: 10px;
