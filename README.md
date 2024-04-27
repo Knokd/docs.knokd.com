@@ -38,7 +38,7 @@ The lowest level, e.g. "Notes" is a section on the Benefits page, not it's own p
 
 Knokd docs can be edited directly in GitHub.
 
-You will find all Knokd docs stored in the `/src/app/` folder. This application generates a static site based on the all the instances of `page.mdx` found in the subfolders of `/src/app/`.
+You will find all Knokd docs stored in the `/src/app/` folder. This application generates a static site based on all the instances of `page.mdx` found in the subfolders of `/src/app/`.
 
 
 ### To make a change on the live site
@@ -47,7 +47,7 @@ You will find all Knokd docs stored in the `/src/app/` folder. This application 
 1. Click into the section that contains your document, e.g. `/realtor-cooperation-policy`
 1. Click the document's corresponding title, e.g.`/types-of-listings` 
 1. Click to open the `page.mdx` file inside that folder.
-For example: The GitHub file at `/src/app/realtor-cooperation-policy/types-of-listings/page.mdx` corresponds to the public URL `docs.knokd.com/welcome-to-knokd/benefits`. 
+For example: The GitHub file at `/src/app/realtor-cooperation-policy/types-of-listings/page.mdx` corresponds to the public URL `https://docs.knokd.com/realtor-cooperation-policy/types-of-listings`. 
 1. Click the 'pencil' **edit** button.
 1. Make your changes in the `page.mdx` file.
 1. Click **Commit changes...**.
