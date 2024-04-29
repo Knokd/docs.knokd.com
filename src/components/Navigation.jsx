@@ -184,7 +184,7 @@ export const navigation = [
     title: 'Welcome to Knokd',
     links: [
       { title: 'Intro', href: '/' },
-      { title: 'Features', href: '/welcome-to-knokd/benefits' },
+      { title: 'Features', href: '/welcome-to-knokd/features' },
     ],
   },
   {
