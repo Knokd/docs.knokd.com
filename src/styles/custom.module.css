@@ -16,3 +16,91 @@
   background-color: #5344ed;
   outline: 2px solid #5344ed;
 }
+
+/* Tables CSS */
+
+.frozen-column-container {
+  position:relative;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Margin needs a reset */ 
+.frozen-column-container table {
+  margin: 0;
+}
+
+/* The table container */
+.col-right {
+  /* Tables are not block elements, so need to 
+  apply the overflow on a div containing the table */
+  overflow-x: auto;
+}
+
+/* The table */
+.col-right table {
+  /* This is required to respect the custom
+  column widths in table-col-x classes */
+  table-layout: fixed;
+}
+
+/* All cells */
+.col-right table th, .col-right table td {
+  padding: 10px;
+  border: 1px solid var(--tw-prose-headings) ;
+}
+
+.table-col-1 {
+  height: 100px;
+  width: clamp(100px, 150px, 200px);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-col-2 {
+  height: 100px;
+  width: clamp(200px, 230px, 390px);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-col-3 {
+  height: 100px;
+  width: clamp(100px, 150px, 200px);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.col-left {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--tw-prose-headings);
+  justify-content: center;
+
+  border-top: 1px solid var(--tw-prose-headings);
+  border-left: 1px solid var(--tw-prose-headings);
+  border-bottom: 1px solid var(--tw-prose-headings);
+}
+
+/* The 'fake' left table-column items */
+.col-left-item {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 10px;
+  width: 160px;
+}
+
+.pseudo-underline::after{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%; /* works now because parent relative, child absolute trick*/
+  top: 100px;
+  border: 1px solid var(--tw-prose-headings);
+  box-shadow: none;
+}
