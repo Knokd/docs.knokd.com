@@ -49,7 +49,7 @@
 /* All cells */
 .col-right table th, .col-right table td {
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--tw-prose-headings) ;
 }
 
 .table-col-1 {
@@ -76,12 +76,12 @@
 .col-left {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid black;
+  border-right: 1px solid var(--tw-prose-headings);
   justify-content: center;
 
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid var(--tw-prose-headings);
+  border-left: 1px solid var(--tw-prose-headings);
+  border-bottom: 1px solid var(--tw-prose-headings);
 }
 
 /* The 'fake' left table-column items */
@@ -101,6 +101,6 @@
   height: 0;
   width: 100%; /* works now because parent relative, child absolute trick*/
   top: 100px;
-  border: 1px solid black;
+  border: 1px solid var(--tw-prose-headings);
   box-shadow: none;
 }
