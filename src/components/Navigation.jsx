@@ -222,16 +222,16 @@ export const navigation = [
       { title: 'Adding Contacts', href: '/contacts/add-contacts' }
     ],
   },
-//  {
-//    title: 'Marketing Toolkit',
-//    links: [
-//      { title: 'Email templates', href: '/marketing-toolkit/email-templates' },
-//      { title: 'Email signatures', href: '/marketing-toolkit/email-signatures' },
-//      { title: 'Sample content', href: '/marketing-toolkit/sample-content' },
-//      { title: 'Presentation slides', href: '/marketing-toolkit/presentation-slides' },
-//      { title: 'Knokd logos', href: '/marketing-toolkit/knokd-logos' },
-//    ],
-//  }
+ {
+   title: 'Marketing Resources',
+   links: [
+     { title: 'Social media posts', href: '/marketing-resources/social-media-posts' },
+     { title: 'Buyer and seller flyers', href: '/marketing-resources/buyer-seller-flyers' },
+     { title: 'Open house flyer', href: '/marketing-resources/open-house-flyer' },
+     { title: 'Newsletter & email pieces', href: '/marketing-resources/newsletters-and-emails' },
+     { title: 'Presentation slides', href: '/marketing-resources/presentation-slides' },
+   ],
+ }
 ]
 
 // Iterative approach
