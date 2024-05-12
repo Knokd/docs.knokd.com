@@ -1,4 +1,5 @@
 import { MarketingMaterial } from '@/components/MarketingMaterial'
+import { MarketingAssets, MarketingAsset } from '@/components/MarketingAssets'
 import { Resources } from '@/components/Resources'
 import { HeroPattern } from '@/components/HeroPattern'
 
@@ -9,17 +10,93 @@ export const metadata = {
 }
 
 export const sections = [
+  {title: "Accouncements", id: "announcement-to-clients"},
+  {title: "Newsletters", id: "newsletter-snippet"},
+  {title: "Email graphics", id: "email-graphics"},
 ]
 
 # Newsletters & email pieces
 
-**Content:**
+Here are some email content pieces that you can send to your agents and clients to inform them about Knokd. {{ className: 'lead' }}
+
+Recommended use: Copy and paste these templates, customise them with [your sign-up link](/contacts/add-contacts#sign-up-link), and share them with your email database. Replace any content between square brackets `[` and `]` with your relevant info.
+
+
+
+## Announcement to clients
+
+**Version 1 of 2:**
+
 <MarketingMaterial>
-I’m excited to announce that I can now offer you access to the Off-Market as my client with Knokd! 💥 🔓
+Hi [first name],
 
-Knokd’s network gives you access to Exclusive and Coming Soon properties that aren’t listed on any other portal, and elevates your home's marketing game. Let's find your dream home or maximize your listing's potential today! 🔑
+Did you know that up to 1 of 3 properties are shared before they are publicly listed? And many listings never get publicly listed at all? 
 
-#KnokdAdvantage #OffMarketRealEstate #RealEstateRevolution #Proptech
+I’ve partnered with Knokd to give you access to all Coming Soon, Exclusive and Assignment listings that I come across.
+
+[Insert button to your signup page with text “Get access to off-market listings”]
+
+All you need to do is set up a search for the home that you are looking for and I will do the rest. If I come across matches for your search, Knokd will help me share them with you as soon as possible.
+
+If you have any questions please let me know,
+[Your Name Here]
 </MarketingMaterial>
+
+**Version 2 of 2:**
+
+<MarketingMaterial>
+Hi there,
+
+I am excited to announce that I am offering a new tool to all my clients: [Knokd](https://knokd.com)!
+
+For the very first time, Knokd is providing Home Buyers and Sellers with access to the off-market!
+
+The off-market includes properties that are Coming Soon or Exclusive and cannot be found on the MLS® or any other portal. In fact, 1 in 3 properties are listed in the off-market and may not ever be listed publicly.
+
+I want to provide you with special access to this hidden off-market inventory.
+
+With Knokd you can:
+  * Browse the entire off-market inventory in Ottawa
+  * Gain first access to off-market properties
+  * Collaborate with me to easily express interest in off-market properties
+  * Gauge the market and test pricing for your home listing without listing it on the MLS®
+  * Boost exposure and increase marketing for your home listing
+  * Share your home discreetly, without listing it on the MLS®
+
+Click here to get access to Knokd today! [Insert your personal landing page link here]
+
+I’m looking forward to providing this exclusive access to you all. If you have any questions, please contact me or the [Knokd team here](https://direct.lc.chat/13256475/).
+
+Sincerely,
+
+[Your Name Here]
+
+</MarketingMaterial>
+
+## Newsletter snippet
+
+<MarketingMaterial>
+Special Access Alert! 🚨
+
+As my client, you now have access to Knokd, the off-market Real Estate platform! Knokd’s network offers insider access to off-market properties that aren’t found on any other portal, unique exposure for listings, and enticing market insights.
+
+Click here to get access to the off-market [Insert your [personal landing page link here](/contacts/add-contacts#sign-up-link)]
+
+</MarketingMaterial>
+
+## Email graphics
+
+<MarketingAssets>
+  <MarketingAsset
+    src="/images/screenshots/marketing-resources/email-graphic-1_preview.png"
+    alt=""
+    flyer={false}
+  />
+  <MarketingAsset
+    src="/images/screenshots/marketing-resources/email-graphic-2_preview.png"
+    alt=""
+    flyer={false}
+  />
+</MarketingAssets>
 
 <Resources/>
