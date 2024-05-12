@@ -31,7 +31,7 @@ export function MarketingAsset ({src, alt}) {
   
   return (
     <div className="w-[280px] shadow shadow-indigo-400 flex justify-center items-center">
-      <button onClick={downloadImage} className="bg-slate-500/70 w-[280px] h-[280px] asset-hover absolute text-white text-xl">
+      <button onClick={downloadImage} className="bg-slate-600/85 w-[280px] h-[280px] asset-hover absolute text-white text-xl">
         Download
       </button>
       <img

@@ -118,7 +118,8 @@
 
 .asset-hover{
   opacity: 0;
-  transition: ease 0.5s;
+  transition: ease 0.3s;
+  cursor: pointer;
 }
 
 .asset-hover:hover {
