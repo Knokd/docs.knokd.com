@@ -1,5 +1,6 @@
 'use client'
 import { saveAs } from 'file-saver';
+import { clsx } from 'clsx';
 
 // Make a container to handle 1-many assets
 export function MarketingAssets ({children}) {
@@ -12,8 +13,12 @@ export function MarketingAssets ({children}) {
 }
 
 // Handle each asset
-export function MarketingAsset ({src, alt}) {
-
+export function MarketingAsset ({src, alt, flyer}) {
+  
+  const btnClasses = flyer ?
+  clsx(`bg-slate-600/85 w-[280px] h-[363px] asset-hover absolute text-white text-xl`):
+  clsx(`bg-slate-600/85 w-[280px] h-[280px] asset-hover absolute text-white text-xl`); 
+  
   const downloadImage = () => {
     // User sees the preview file (faster page load) but downloads the full version
     const imageUrl = src.replace('preview', 'full');
@@ -31,7 +36,7 @@ export function MarketingAsset ({src, alt}) {
   
   return (
     <div className="w-[280px] shadow shadow-indigo-400 flex justify-center items-center">
-      <button onClick={downloadImage} className="bg-slate-600/85 w-[280px] h-[280px] asset-hover absolute text-white text-xl">
+      <button onClick={downloadImage} className={btnClasses}>
         Download
       </button>
       <img
