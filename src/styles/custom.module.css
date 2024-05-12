@@ -125,3 +125,12 @@
 .asset-hover:hover {
   opacity: 1;
 }
+
+.list-reset ul, .list-reset li {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.list-reset p {
+  margin-bottom: 0;
+}
