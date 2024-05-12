@@ -1,11 +1,12 @@
 import { MarketingMaterial } from '@/components/MarketingMaterial'
 import { Resources } from '@/components/Resources'
 import { HeroPattern } from '@/components/HeroPattern'
+import { MarketingAsset, MarketingAssets } from '@/components/MarketingAssets'
 
 export const metadata = {
   title: 'Open-house flyer',
   description:
-    'meta description goes here',
+    'Open-house flyer for sellers',
 }
 
 export const sections = [
@@ -13,13 +14,18 @@ export const sections = [
 
 # Open-house flyer
 
-**Content:**
-<MarketingMaterial>
-I’m excited to announce that I can now offer you access to the Off-Market as my client with Knokd! 💥 🔓
+Below you will find an open house flyer that you can print and display for prospective clients. {{ className: 'lead' }}
 
-Knokd’s network gives you access to Exclusive and Coming Soon properties that aren’t listed on any other portal, and elevates your home's marketing game. Let's find your dream home or maximize your listing's potential today! 🔑
+Recommended use: Print this out and place it next to your sign in book or documents at your open house. It will help spark conversations between you and potential clients. 
 
-#KnokdAdvantage #OffMarketRealEstate #RealEstateRevolution #Proptech
-</MarketingMaterial>
+Bonus Tip: Download this document and add a QR code with your custom sign up link so contacts can easily join your network.
+
+<MarketingAssets>
+  <MarketingAsset
+    src="/images/screenshots/marketing-resources/open-house-flyer_preview.png"
+    alt="Open house flyer"
+    flyer={true}
+  />
+</MarketingAssets>  
 
 <Resources/>
