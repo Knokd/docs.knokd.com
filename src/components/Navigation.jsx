@@ -230,6 +230,7 @@ export const navigation = [
      { title: 'Open house flyer', href: '/marketing-resources/open-house-flyer' },
      { title: 'Newsletter & email pieces', href: '/marketing-resources/newsletters-and-emails' },
      { title: 'Presentation slides', href: '/marketing-resources/presentation-slides' },
+     { title: 'Knokd Logos', href: '/marketing-resources/knokd-logos' },
    ],
  }
 ]

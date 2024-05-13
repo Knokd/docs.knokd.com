@@ -18,16 +18,26 @@ export function MarketingAsset ({src, alt, layout}) {
   let btnClasses;
   let containerClasses;
 
-  layout === 'slide' ? 
-    containerClasses = 'w-[280px] sm:w-[600px] xl:w-[800px] shadow shadow-indigo-400 flex justify-center items-center':
+  // Define asset's conatainer's size
+  if (layout === 'slide'){
+    containerClasses = 'w-[280px] sm:w-[600px] xl:w-[800px] shadow shadow-indigo-400 flex justify-center items-center';
+  } else if (layout === 'slide-short'){
+    containerClasses = 'w-[280px] sm:w-[600px] xl:w-[800px] shadow shadow-indigo-400 flex justify-center items-center';
+  } else if (layout === 'square'){
     containerClasses = 'w-[280px] shadow shadow-indigo-400 flex justify-center items-center';
-
-  if (layout == 'square'){
-    btnClasses = clsx(`bg-slate-600/85 w-[280px] h-[280px] asset-hover absolute text-white text-xl`) 
   } else if (layout === 'flyer'){
-    btnClasses = clsx(`bg-slate-600/85 w-[280px] h-[363px] asset-hover absolute text-white text-xl`)
+    containerClasses = 'w-[280px] shadow shadow-indigo-400 flex justify-center items-center';
+  }
+    
+  // Define button's size
+  if (layout == 'square'){
+    btnClasses = `bg-slate-600/85 w-[280px] h-[280px] asset-hover absolute text-white text-xl`
+  } else if (layout === 'flyer'){
+    btnClasses = `bg-slate-600/85 w-[280px] h-[363px] asset-hover absolute text-white text-xl`
   } else if (layout === 'slide') {
-    btnClasses = clsx(`bg-slate-600/85 w-[280px] sm:w-[600px] xl:w-[770px] h-[158px] sm:h-[338px] xl:h-[432px] asset-hover absolute text-white text-xl`)
+    btnClasses = `bg-slate-600/85 w-[280px] sm:w-[600px] xl:w-[770px] h-[158px] sm:h-[338px] xl:h-[432px] asset-hover absolute text-white text-xl`
+  } else if (layout === 'slide-short') {
+    btnClasses = `bg-slate-600/85 w-[280px] sm:w-[600px] xl:w-[770px] h-[100px] sm:h-[212px] xl:h-[272px] asset-hover absolute text-white text-xl`
   };
 
   const downloadImage = () => {
