@@ -13,12 +13,23 @@ export function MarketingAssets ({children}) {
 }
 
 // Handle each asset
-export function MarketingAsset ({src, alt, flyer}) {
+export function MarketingAsset ({src, alt, layout}) {
   
-  const btnClasses = flyer ?
-  clsx(`bg-slate-600/85 w-[280px] h-[363px] asset-hover absolute text-white text-xl`):
-  clsx(`bg-slate-600/85 w-[280px] h-[280px] asset-hover absolute text-white text-xl`); 
-  
+  let btnClasses;
+  let containerClasses;
+
+  layout === 'slide' ? 
+    containerClasses = 'w-[280px] sm:w-[600px] xl:w-[800px] shadow shadow-indigo-400 flex justify-center items-center':
+    containerClasses = 'w-[280px] shadow shadow-indigo-400 flex justify-center items-center';
+
+  if (layout == 'square'){
+    btnClasses = clsx(`bg-slate-600/85 w-[280px] h-[280px] asset-hover absolute text-white text-xl`) 
+  } else if (layout === 'flyer'){
+    btnClasses = clsx(`bg-slate-600/85 w-[280px] h-[363px] asset-hover absolute text-white text-xl`)
+  } else if (layout === 'slide') {
+    btnClasses = clsx(`bg-slate-600/85 w-[280px] sm:w-[600px] xl:w-[770px] h-[158px] sm:h-[338px] xl:h-[432px] asset-hover absolute text-white text-xl`)
+  };
+
   const downloadImage = () => {
     // User sees the preview file (faster page load) but downloads the full version
     const imageUrl = src.replace('preview', 'full');
@@ -35,7 +46,7 @@ export function MarketingAsset ({src, alt, flyer}) {
   }
   
   return (
-    <div className="w-[280px] shadow shadow-indigo-400 flex justify-center items-center">
+    <div className={containerClasses}>
       <button onClick={downloadImage} className={btnClasses}>
         Download
       </button>

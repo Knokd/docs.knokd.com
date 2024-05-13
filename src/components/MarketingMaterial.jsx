@@ -1,6 +1,7 @@
 'use client'
 
 import {
+  useRef,
   useEffect,
   useState,
 } from 'react'
@@ -8,22 +9,7 @@ import clsx from 'clsx'
 
 export function MarketingMaterial ({children}) {
   let [copyCount, setCopyCount] = useState(0)
-
-
-  // One-level function
-  // function getTextContent() {
-  //   let containerDiv = event.target.closest('div')
-  //   let siblingPre = containerDiv.querySelector('pre')
-  //   console.log(siblingPre.innerHTML)
-  //   return textContent ;
-  // }
   
-  const handleCopy = (children) => {
-    // Extract the paragraphs
-    const textContent = getTextContent(children)
-    // Copy to clipboard
-    navigator.clipboard.writeText(textContent).then(() => setCopyCount(copyCount + 1))
-  }
 
   function MarketingClipboardIcon(props) {
     return (
@@ -41,48 +27,70 @@ export function MarketingMaterial ({children}) {
     )
   }
 
-  // function MarketingCopyButton({ children }) {
   
-  //   let copied = copyCount > 0
 
+  // function MarketingCopyButton({ children, onSuccess, onError }) {
+  
+  //   const contentRef = useRef(null);
+  //   const [isCopied, setIsCopied] = useState(false);
+  
   //   useEffect(() => {
-  //     if (copyCount > 0) {
-  //       let timeout = setTimeout(() => setCopyCount(0), 1000)
-  //       return () => {
-  //         clearTimeout(timeout)
+  //     const handleClick = async () => {
+  //       const selection = window.getSelection();
+  //       const range = document.createRange();
+  
+  //       try {
+  //         // Select the entire content element
+  //         range.selectNodeContents(contentRef.current);
+  //         selection.removeAllRanges();
+  //         selection.addRange(range);
+  
+  //         await navigator.clipboard.writeText(selection.toString());
+  //         setIsCopied(true);
+  //         if (onSuccess) onSuccess();
+  //       } catch (err) {
+  //         console.error("Failed to copy text:", err);
+  //         if (onError) onError(err);
+  //       } finally {
+  //         selection.removeAllRanges();
+  //         setIsCopied(false); // Reset copied state after a timeout
   //       }
-  //     }
-  //   }, [copyCount])
+  //     };
+  
+  //     const button = document.addEventListener('click', handleClick);
+    
+  
+  //     return () => document.removeEventListener('click', button);
+  //   }, [children, onSuccess, onError]);
 
   //   return (
   //     <button
   //       type="button"
   //       className={clsx(
   //         'group/button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-100 backdrop-blur transition focus:opacity-100 group-hover:opacity-100',
-  //         copied
+  //         isCopied
   //           ? 'bg-indigo-400/10 ring-1 ring-inset ring-indigo-400/20'
   //           : 'bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5',
   //       )}
   //       onClick={() => {
-  //         handleCopy(children);
   //         setCopyCount((count) => count + 1)
   //       }}
   //     >
   //       <span
-  //         aria-hidden={copied}
+  //         aria-hidden={isCopied}
   //         className={clsx(
   //           'pointer-events-none flex items-center gap-0.5 text-zinc-400 transition duration-300',
-  //           copied && '-translate-y-1.5 opacity-0',
+  //           isCopied && '-translate-y-1.5 opacity-0',
   //         )}
   //       >
   //         <MarketingClipboardIcon className="h-5 w-5 fill-indigo-500 stroke-indigo-500 transition-colors group-hover/button:stroke-indigo-400" />
   //         Copy
   //       </span>
   //       <span
-  //         aria-hidden={!copied}
+  //         aria-hidden={!isCopied}
   //         className={clsx(
   //           'pointer-events-none absolute inset-0 flex items-center justify-center text-indigo-400 transition duration-300',
-  //           !copied && 'translate-y-1.5 opacity-0',
+  //           !isCopied && 'translate-y-1.5 opacity-0',
   //         )}
   //       >
   //         Copied!
