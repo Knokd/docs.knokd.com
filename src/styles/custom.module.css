@@ -104,3 +104,13 @@
   border: 1px solid var(--tw-prose-headings);
   box-shadow: none;
 }
+
+/* Listing tags */
+
+.listing-tag {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 2em;
+}
