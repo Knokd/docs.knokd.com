@@ -134,3 +134,9 @@
 .list-reset p {
   margin-bottom: 0;
 }
+
+/* Marketing Material */
+
+.reset-margin-first-p p:nth-child(1) {
+  margin: 0;
+}
