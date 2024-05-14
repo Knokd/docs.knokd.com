@@ -185,12 +185,7 @@ export const navigation = [
     links: [
       { title: 'Intro', href: '/' },
       { title: 'Features', href: '/welcome-to-knokd/features' },
-    ],
-  },
-  {
-    title: 'Realtor Cooperation Policy',
-    links: [
-      { title: 'About the RCP', href: '/realtor-cooperation-policy/what-is-the-rcp' },
+      { title: 'Realtor Cooperation Policy', href: '/welcome-to-knokd/realtor-cooperation-policy' },
     ],
   },
   {
