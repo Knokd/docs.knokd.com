@@ -1,6 +1,9 @@
 import { MarketingMaterial } from '@/components/MarketingMaterial'
 import { Resources } from '@/components/Resources'
 import { HeroPattern } from '@/components/HeroPattern'
+import { Screenshot } from '@/components/Screenshot'
+import { MarketingAssets } from '@/components/MarketingAssets'
+import { MarketingAsset } from '@/components/MarketingAssets'
 
 export const metadata = {
   title: 'Social media posts',
@@ -9,11 +12,35 @@ export const metadata = {
 }
 
 export const sections = [
+  {title: "Post 1", id: "post-1"},
+  {title: "Post 2", id: "post-2"},
+  {title: "Post 3", id: "post-3"},
 ]
 
 # Social media posts
 
-**Content:**
+Here are 3 launch-ready social media posts and captions for you to share! Please edit the captions as you see fit. {{ className: 'lead' }}
+
+**Recommended use:** Share these posts on Facebook, Instagram, Linkedin or your platform of choice. You can also add your [custom sign-up link](/contacts/add-contacts#sign-up-link) to the post or your bio. 
+
+To download images, right click on the images below and click “Save Image As…”. 
+
+## Post 1
+
+**Assets:**
+<MarketingAssets>
+  <MarketingAsset
+    src="/images/screenshots/marketing-resources/post-1-1_preview.png"
+    alt="Properties you won't find anywhere else"
+  />
+  <MarketingAsset
+    src="/images/screenshots/marketing-resources/post-1-2_preview.png"
+    alt="Properties you won't find anywhere else"
+  />
+</MarketingAssets>
+
+**Caption:**
+
 <MarketingMaterial>
 I’m excited to announce that I can now offer you access to the Off-Market as my client with Knokd! 💥 🔓
 

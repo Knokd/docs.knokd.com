@@ -114,3 +114,13 @@
   width: auto;
   height: 2em;
 }
+/* Marketing Assets */
+
+.asset-hover{
+  opacity: 0;
+  transition: ease 0.5s;
+}
+
+.asset-hover:hover {
+  opacity: 1;
+}
