@@ -114,3 +114,23 @@
   width: auto;
   height: 2em;
 }
+/* Marketing Assets */
+
+.asset-hover{
+  opacity: 0;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.asset-hover:hover {
+  opacity: 1;
+}
+
+.list-reset ul, .list-reset li {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.list-reset p {
+  margin-bottom: 0;
+}

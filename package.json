@@ -24,6 +24,7 @@
     "autoprefixer": "^10.4.7",
     "clsx": "^2.1.0",
     "fast-glob": "^3.3.0",
+    "file-saver": "^2.0.5",
     "flexsearch": "^0.7.31",
     "framer-motion": "^10.18.0",
     "heroicons-react": "^1.4.1",

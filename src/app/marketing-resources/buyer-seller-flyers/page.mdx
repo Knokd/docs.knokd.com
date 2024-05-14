@@ -1,0 +1,53 @@
+import { MarketingMaterial } from '@/components/MarketingMaterial'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+import { MarketingAsset, MarketingAssets } from '@/components/MarketingAssets'
+
+export const metadata = {
+  title: 'Buyer and seller flyers',
+  description:
+    'Flyer resources for buyers and sellers',
+}
+
+export const sections = [
+  {title: "Buyer version", id: "buyer-version"},
+  {title: "Seller version", id: "seller-version"},
+]
+
+# Buyer and seller flyers
+
+Here are one-pagers for your buyer or seller contacts to help you explain the benefits of the off-market and Knokd. {{ className: 'lead' }}
+
+Recommended use: Print out these flyers and have some available at open houses, or add them to your information booklet in Buyer or Seller presentations. 
+
+Bonus Tip: we have included colour versions, as well as black and white versions. If you do not have colour printing, we recommend using the black and white. 
+
+## Buyer Version:
+
+<MarketingAssets>
+  <MarketingAsset
+    src="/images/screenshots/marketing-resources/buyer-color_preview.png"
+    alt="Color version of the buyer's flyer"
+    layout='flyer'
+  />
+  <MarketingAsset
+    src="/images/screenshots/marketing-resources/buyer-black-and-white_preview.png"
+    alt="Black and white version of the buyer's flyer"
+    layout='flyer'
+  />
+</MarketingAssets>  
+
+## Seller Version:
+
+<MarketingAssets>
+  <MarketingAsset
+    src="/images/screenshots/marketing-resources/seller-color_preview.png"
+    alt="Color version of the seller's flyer"
+    layout='flyer'
+  />
+  <MarketingAsset
+    src="/images/screenshots/marketing-resources/seller-black-and-white_preview.png"
+    alt="Black and white version of the seller's flyer"
+    layout='flyer'
+  />
+</MarketingAssets>
