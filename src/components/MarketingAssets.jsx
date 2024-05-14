@@ -13,7 +13,7 @@ export function MarketingAssets ({children}) {
 }
 
 // Handle each asset
-export function MarketingAsset ({src, alt, layout}) {
+export function MarketingAsset ({src, alt, layout, title}) {
   
   let btnClasses;
   let containerClasses;
@@ -56,6 +56,7 @@ export function MarketingAsset ({src, alt, layout}) {
   }
   
   return (
+    <>
     <div className={containerClasses}>
       <button onClick={downloadImage} className={btnClasses}>
         Download
@@ -66,6 +67,7 @@ export function MarketingAsset ({src, alt, layout}) {
       className="w-full my-0 mx-auto"
       />
     </div>
+    </>
     
   )
 }
