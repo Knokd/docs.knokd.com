@@ -102,7 +102,7 @@ export function MarketingMaterial ({children}) {
 
   return (
     <div className=" mx-auto relative bg-slate-700 rounded p-4 list-reset">
-      <pre className="overflow-hidden text-wrap p-4 text-xs text-white">{children}</pre>
+      <pre className="overflow-hidden text-wrap p-4 text-xs text-white reset-margin-first-p">{children}</pre>
       {/* <MarketingCopyButton children={children}/> */}
     </div>
   )
