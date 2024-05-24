@@ -1,0 +1,41 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const metadata = {
+  title: 'Reassigning contacts',
+  description:
+    'Team admins can reassign contacts to new agents',
+}
+
+export const sections = [
+  { title: 'Becoming an team admin', id: 'becoming-an-admin' },
+  { title: 'Reassign a contact', id: 'reassign-a-contact' },
+]
+
+<HeroPattern />
+
+# Reassigning Contacts
+
+Since [Contacts](/contacts/add-contacts) can only follow one agent at a time, and they have a business relationship with the agent, it's important to ensure that they're connected with the proper agent.
+
+<Note>In order to reassing a contact, you'll need to ensure that [you have team admin priviledges](#becoming-a-team-admin) before you can [reassign a contact](#reassign-a-contact).</Note>
+
+## Become a team admin
+
+Only Team admins are able to re-assign contacts to a new agent. As pre-requisites, you'll need to make sure that:
+
+1. Your account is part of [a team on Knokd](http://localhost:3000/getting-started/sign-up-as-a-team).
+2. You are granted admin priviledges within your team.
+
+<Note>If you believe you should be a team admin, please email hello@knokd.com for support.</Note>
+
+## Reassign a contact
+
+If you're a team member with admin priviledges, it's easy to reassign a contact.
+
+1. <a href="https://app.knokd.ca/login" target="_blank">Log in to Knokd</a>.
+1. Click **Contacts** in the sidebar navigation.
+1. Click to select the contact you will reassign.
+1. Click **Reassign contact** to open a modal window.
+1. Select the contact from the drop-down menu.
+1. (optional) **Check** the box to notify the contact, and we'll send them an email update.
+1. Click **Reassign**. 
