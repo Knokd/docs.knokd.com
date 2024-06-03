@@ -24,7 +24,7 @@ const variantStyles = {
   outline:
     'rounded-full py-1 px-3 text-zinc-700 ring-1 ring-inset ring-zinc-900/10 hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white',
   text: 'text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-500',
-  cta: 'rounded-full p-4 bg-slate-50 text-indigo-600 text-lg max-h-[60px]',
+  cta: 'rounded-full p-4 bg-slate-50 text-indigo-600 text-lg min-w-min text-center height-control',
 }
 
 export function Button({
