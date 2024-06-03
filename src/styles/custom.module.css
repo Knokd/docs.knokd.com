@@ -140,3 +140,16 @@
 .reset-margin-first-p p:nth-child(1) {
   margin: 0;
 }
+
+/* From Brochure */
+
+.white-top-heading {
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-family: Robotoflex Variablefont Grad Xtra Yopq Ytas Ytde Ytfi Ytlc Ytuc Opsz Slnt Wdth Wght, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 120%;
+}
