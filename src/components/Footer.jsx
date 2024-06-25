@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 
 import { Button } from '@/components/Button'
 import { navigation } from '@/components/Navigation'
+import { ContactSection } from '@/components/ContactSection'
 
 function PageLink({ label, page, previous = false }) {
   return (
@@ -149,6 +150,7 @@ function SmallPrint() {
 export function Footer() {
   return (
     <footer className="mx-auto w-full max-w-2xl space-y-10 pb-16 lg:max-w-5xl">
+      <ContactSection/>
       <PageNavigation />
       <SmallPrint />
     </footer>
