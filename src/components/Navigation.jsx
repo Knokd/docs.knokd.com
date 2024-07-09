@@ -225,6 +225,7 @@ export const navigation = [
      { title: 'Buyer and seller flyers', href: '/marketing-resources/buyer-seller-flyers' },
      { title: 'Open house flyer', href: '/marketing-resources/open-house-flyer' },
      { title: 'Newsletter & email pieces', href: '/marketing-resources/newsletters-and-emails' },
+     { title: 'Email signature templates', href: '/marketing-resources/email-signature-templates' },
      { title: 'Presentation slides', href: '/marketing-resources/presentation-slides' },
      { title: 'Knokd Logos', href: '/marketing-resources/knokd-logos' },
    ],
@@ -238,7 +239,7 @@ export function Navigation(props) {
       <ul role="list">
         {/* <div className='flex flex-col gap-4 md:hidden'> 
           <ExternalCTAItem primary={false} href="https://app.knokd.com/login">Log In</ExternalCTAItem>
-          <ExternalCTAItem primary={true} href="https://www.knokd.ca/get-started">Get Started</ExternalCTAItem>
+          <ExternalCTAItem primary={true} href="https://www.knokd.com/get-started">Get Started</ExternalCTAItem>
         </div> */}
         {navigation.map((group, groupIndex) => (
           <NavigationGroup

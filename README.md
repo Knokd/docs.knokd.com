@@ -5,7 +5,7 @@ Welcome to Knokd documentation!
 The Knokd Docs are built on top of [Protocol Tailwind UI](https://tailwindui.com/templates/protocol). In this Readme you can learn about:
 
 1. [Limits of the information architecture](#information-architecture)
-1. [Making changes to docs.knokd.ca](#editing-the-docs)
+1. [Making changes to docs.knokd.com](#editing-the-docs)
 1. [Using screenshots](#using-screenshots)
 1. [Running the docs app in a development environment](#protocol-template)
 
