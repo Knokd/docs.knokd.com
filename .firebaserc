@@ -5,8 +5,12 @@
   "targets": {
     "knokd-412220": {
       "hosting": {
-        "documentation": "knokd-documentation"
+        "documentation": [
+          "knokd-documentation"
+        ]
       }
     }
-  }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
