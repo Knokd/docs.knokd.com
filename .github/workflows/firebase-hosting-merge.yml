@@ -17,4 +17,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KNOKD_DOCS }}'
           channelId: live
-          projectId: knokd-docs
+          projectId: knokd-412220

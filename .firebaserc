@@ -1,5 +1,12 @@
 {
   "projects": {
-    "default": "knokd-docs"
+    "default": "knokd-412220"
+  },
+  "targets": {
+    "knokd-412220": {
+      "hosting": {
+        "documentation": "knokd-documentation"
+      }
+    }
   }
 }
