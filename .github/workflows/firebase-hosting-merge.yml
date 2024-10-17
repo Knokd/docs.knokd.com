@@ -18,3 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KNOKD_DOCS }}'
           channelId: live
           projectId: knokd-412220
+          target: documentation
