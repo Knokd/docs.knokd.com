@@ -216,6 +216,7 @@ export const navigation = [
     links: [
       { title: 'Adding Contacts', href: '/contacts/add-contacts' },
       { title: 'Reassigning Contacts', href: '/contacts/reassigning-contacts' },
+      { title: 'Removing Contacts', href: '/contacts/removing-contacts' },
     ],
   },
  {
