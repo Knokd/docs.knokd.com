@@ -203,6 +203,7 @@ export const navigation = [
       { title: 'Sharing link', href: '/listings/sharing-link' },
       { title: '1-to-1 sharing', href: '/listings/1-1-sharing' },
       { title: 'Listing types', href: '/listings/types-of-listings'},
+      { title: 'Analytics', href: '/listings/analytics'},
     ],
   },
   {
@@ -212,11 +213,25 @@ export const navigation = [
     ],
   },
   {
+    title: 'Sign Up Link & QR Code',
+    links: [
+      { title: 'Sign up link & QR Code', href: '/sign-up-link-and-qr-code' },
+    ],
+  },
+  {
     title: 'Contacts',
     links: [
       { title: 'Adding Contacts', href: '/contacts/add-contacts' },
       { title: 'Reassigning Contacts', href: '/contacts/reassigning-contacts' },
       { title: 'Removing Contacts', href: '/contacts/removing-contacts' },
+    ],
+  },
+  {
+    title: 'Brokerage Management',
+    links: [
+      { title: 'Adding an agent', href: '/brokerage-management/adding-an-agent' },
+      { title: 'Removing an agent', href: '/brokerage-management/removing-an-agent' },
+      { title: 'Create a listing', href: '/brokerage-management/admin-create-a-listing' },
     ],
   },
  {
