@@ -234,18 +234,7 @@ export const navigation = [
       { title: 'Create a listing', href: '/brokerage-management/admin-create-a-listing' },
     ],
   },
- {
-   title: 'Marketing Resources',
-   links: [
-     { title: 'Social media posts', href: '/marketing-resources/social-media-posts' },
-     { title: 'Buyer and seller flyers', href: '/marketing-resources/buyer-seller-flyers' },
-     { title: 'Open house flyer', href: '/marketing-resources/open-house-flyer' },
-     { title: 'Newsletter & email pieces', href: '/marketing-resources/newsletters-and-emails' },
-     { title: 'Email signature templates', href: '/marketing-resources/email-signature-templates' },
-     { title: 'Presentation slides', href: '/marketing-resources/presentation-slides' },
-     { title: 'Knokd Logos', href: '/marketing-resources/knokd-logos' },
-   ],
- }
+ 
 ]
 
 // Iterative approach
