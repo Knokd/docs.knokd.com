@@ -181,7 +181,7 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: 'Welcome to Knokd',
+    title: 'Welcome to FirstList',
     links: [
       { title: 'Intro', href: '/' },
       { title: 'Features', href: '/welcome-to-knokd/features' },
