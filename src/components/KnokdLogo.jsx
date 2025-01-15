@@ -1,7 +1,7 @@
 import { resolvedTheme, useTheme } from 'next-themes'
 import Image from "next/image";
-import LogoInverted from '../../public/images/knokd-logo-xl-inverted.png';
-import LogoNoBg from '../../public/images/knokd-logo-xl.png';
+import LogoInverted from '../../public/images/firstlist-logo-dark-background.png';
+import LogoNoBg from '../../public/images/firstlist-logo.png';
 
 export function KnokdLogo () {
   const { resolvedTheme } = useTheme();
