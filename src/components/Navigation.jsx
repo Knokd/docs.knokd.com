@@ -255,7 +255,7 @@ export const navigation = [
         href: '/marketing-resources/email-signature-templates',
       },
       
-      { title: 'Knokd Logos', href: '/marketing-resources/knokd-logos' },
+      { title: 'FirstList Logos', href: '/marketing-resources/knokd-logos' },
     ],
   },
 ]
