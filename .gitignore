@@ -19,6 +19,9 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+keyNov7
+KeyNov7.pub
+
 # IDE and editor files
 .idea/
 .vscode/
