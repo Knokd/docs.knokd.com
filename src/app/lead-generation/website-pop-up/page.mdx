@@ -1,0 +1,120 @@
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+import { Screenshot } from '@/components/Screenshot'
+import { Libraries } from '@/components/Libraries'
+
+<meta name="og:title" content="Configure Your FirstList Website Widget" />
+<meta name="og:description" content="Learn how to customize and implement the FirstList website widget. Capture leads and showcase your listings with our easy-to-use configuration options." />
+
+export const metadata = {
+  title: "Website Widget Configuration – Customize Your Lead Generation Tool",
+  description: "Master the FirstList website widget configuration. Learn how to customize appearance, behavior, and implement the widget to capture leads effectively. Explore FirstList Docs and optimize your online presence!"
+};
+
+<HeroPattern />
+
+# Website Pop-up
+
+The **Website Pop-up** is a lead generation tool that can be added to any website to collect buyer leads. It allows visitors to sign up as contacts, search for properties, and optionally provide their phone numbers. All signups require email verification to ensure accuracy.
+
+This feature is available exclusively for premium users and can be fully customized to match your website’s design. Anyone who signs up through the pop-up will receive a **daily email summary of "Coming Soon" listings** that your team has access to.
+
+<Screenshot 
+  src="/images/screenshots/popup-example.png"
+  alt="Example of the FirstList Website Pop-up"
+  caption='You can view a working example of the FirstList Website Pop-up on our <a href="https://www.firstlist.co/popup-example" target="_blank">example page</a>.'
+/>
+
+## Add the Pop-up to Your Website
+
+1. <a href="https://app.firstlist.co/login" target="_blank">Login</a> to your FirstList account.
+2. Navigate to the **Settings** page.
+3. Ensure you are subscribed to the **Premium** plan.
+4. Find the **Website Pop-up** tab.
+4. Copy the embed code.
+5. Paste the embed code into the HTML of your website.
+6. Configure the pop-up using the **Basic Configuration** section below.
+
+## How It Works
+
+1. **Visitors sign up** by providing their name and email.
+2. **They receive an email to verify their email address.**
+3. **After verification**, they receive a confirmation email with details about their subscription to your team’s daily “Coming Soon” email, along with an option to complete their signup and create a property search.
+4. **They begin receiving daily listing summaries**, featuring "Coming Soon" properties your team has access to. Each email includes a call to action to reach out to you or adjust their search criteria.
+5. **All new signups are automatically added as contacts** in your FirstList account.
+
+## Basic Configuration
+
+```javascript
+window.knokdWidgetConfig = {
+  apiKey: "your-api-key-here",    // Required
+  position: "left",               // Optional
+  timeDelay: 2,                  // Optional
+  widgetType: "WidgetComingSoon", // Optional
+  initialText: "Coming Soon Listings", // Optional
+  footerText: "I agree to be contacted by email.", // Optional
+  googleFont: "Poppins"          // Optional
+};
+```
+
+### Core Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `apiKey` | String | Required | Your unique API key for the widget |
+| `position` | String | `"right"` | Widget position on screen (`"left"` or `"right"`) |
+| `timeDelay` | Number | `2` | Delay in seconds before widget appears |
+| `widgetType` | String | `"WidgetComingSoon"` | Type of widget to display |
+| `initialText` | String | `"Coming Soon Listings"` | Text displayed on the initial button |
+| `footerText` | String | `"I agree to be contacted by email."` | Text displayed in the footer |
+| `googleFont` | String | `"Poppins"` | Google Font to use throughout the widget |
+
+## Implementation Example
+
+Here's a complete example of how to implement and configure the widget:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+</head>
+<body>
+    <!-- Widget Configuration -->
+    <script>
+        window.knokdWidgetConfig = {
+            apiKey: "your-api-key-here",
+            position: "right",
+            timeDelay: 2,
+            widgetType: "WidgetComingSoon",
+            initialText: "Coming Soon Listings",
+            footerText: "I agree to be contacted by email.",
+            googleFont: "Poppins",
+            styles: {
+                roundedSize: 15,
+                backgroundColor: "#564ae4",
+                fontColor: "#ffffff",
+                footerColor: "#ffffff",
+                buttonColor: "#ffffff",
+                accentColor: "#3c35c5",
+                errorColor: "#df0000",
+                buttonHoverColor: "#594EE5",
+                buttonTextColor: "#000000",
+                borderColor: "#CCC"
+            }
+        };
+    </script>
+    
+    <!-- Widget Script -->
+    <script src="dist/firstlist-widget-demo.iife.js"></script>
+</body>
+</html>
+```
+
+## Notes
+
+- All style colors should be provided in hexadecimal format
+- The `apiKey` is required for the widget to function
+- Make sure to include the widget script after the configuration
+- The Google Font specified must be available in the Google Fonts library

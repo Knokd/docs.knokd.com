@@ -213,9 +213,10 @@ export const navigation = [
     ],
   },
   {
-    title: 'Sign Up Link & QR Code',
+    title: 'Lead Generation',
     links: [
-      { title: 'Sign up link & QR Code', href: '/sign-up-link-and-qr-code' },
+      { title: 'Sign up link & QR Code', href: '/lead-generation/sign-up-link-and-qr-code' },
+      { title: 'Website Popup', href: '/lead-generation/website-pop-up' },
     ],
   },
   {
