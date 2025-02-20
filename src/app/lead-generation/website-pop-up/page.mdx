@@ -4,8 +4,8 @@ import { HeroPattern } from '@/components/HeroPattern'
 import { Screenshot } from '@/components/Screenshot'
 import { Libraries } from '@/components/Libraries'
 
-<meta name="og:title" content="Configure Your FirstList Website Widget" />
-<meta name="og:description" content="Learn how to customize and implement the FirstList website widget. Capture leads and showcase your listings with our easy-to-use configuration options." />
+<meta name="og:title" content="Configure Your FirstList Website Pop-up" />
+<meta name="og:description" content="Learn how to customize and implement the FirstList website pop-up. Capture leads and showcase your listings with our easy-to-use configuration options." />
 
 export const metadata = {
   title: "Website Widget Configuration – Customize Your Lead Generation Tool",
@@ -47,7 +47,7 @@ This feature is available exclusively for premium users and can be fully customi
 ## Basic Configuration
 
 ```javascript
-window.knokdWidgetConfig = {
+window.popupConfig = {
   apiKey: "your-api-key-here",    // Required
   position: "left",               // Optional
   timeDelay: 2,                  // Optional
@@ -83,7 +83,7 @@ Here's a complete example of how to implement and configure the widget:
 <body>
     <!-- Widget Configuration -->
     <script>
-        window.knokdWidgetConfig = {
+        window.popupConfig = {
             apiKey: "your-api-key-here",
             position: "right",
             timeDelay: 2,
