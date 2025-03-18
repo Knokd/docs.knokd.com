@@ -43,25 +43,33 @@ export function MarketingAsset ({src, alt, layout, title}) {
   const isPDF = src.toLowerCase().endsWith('.pdf');
   const previewSrc = isPDF ? src.replace('.pdf', '_preview.jpg') : src;
 
-  const downloadAsset = () => {
-    // User sees the preview file (faster page load) but downloads the full version
-    const fileUrl = src.replace('preview', 'full');
-    // Grab everything after the last / in the url for filename
-    const fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1, fileUrl.length);
-    
-    fetch(fileUrl)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.blob();
-      })
-      .then(blob => {
-        saveAs(blob, fileName);
-      })
-      .catch(error => {
-        console.error('Error downloading file:', error);
+  const downloadAsset = async () => {
+    try {
+      // Ensure we have a valid URL by using URL constructor
+      const fileUrl = new URL(src.replace('preview', 'full'), window.location.origin).toString();
+      
+      // Log the URL we're trying to fetch (for debugging)
+      console.log('Attempting to download:', fileUrl);
+      
+      const response = await fetch(fileUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/pdf, image/*',  // Accept both PDFs and images
+        },
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const blob = await response.blob();
+      const fileName = src.split('/').pop(); // Get filename from path
+      
+      saveAs(blob, fileName);
+    } catch (error) {
+      console.error('Download error:', error);
+      alert('Sorry, there was an error downloading the file. Please try again later.');
+    }
   }
   
   return (
