@@ -40,34 +40,42 @@ export function MarketingAsset ({src, alt, layout, title}) {
     btnClasses = `bg-slate-600/85 w-[280px] sm:w-[600px] xl:w-[770px] h-[100px] sm:h-[212px] xl:h-[272px] asset-hover absolute text-white text-xl`
   };
 
-  const downloadImage = () => {
+  const isPDF = src.toLowerCase().endsWith('.pdf');
+  const previewSrc = isPDF ? src.replace('.pdf', '_preview.jpg') : src;
+
+  const downloadAsset = () => {
     // User sees the preview file (faster page load) but downloads the full version
-    const imageUrl = src.replace('preview', 'full');
+    const fileUrl = src.replace('preview', 'full');
     // Grab everything after the last / in the url for filename
-    const fileName = imageUrl.substring(imageUrl.lastIndexOf('/') + 1, imageUrl.length)
-    fetch(imageUrl)
-      .then(response => response.blob())
+    const fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1, fileUrl.length);
+    
+    fetch(fileUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.blob();
+      })
       .then(blob => {
         saveAs(blob, fileName);
       })
       .catch(error => {
-        console.error('Error downloading image:', error);
+        console.error('Error downloading file:', error);
       });
   }
   
   return (
     <>
     <div className={containerClasses}>
-      <button onClick={downloadImage} className={btnClasses}>
-        Download
+      <button onClick={downloadAsset} className={btnClasses}>
+        Download {isPDF ? 'PDF' : ''}
       </button>
       <img
-      src={src}
-      alt={alt}
-      className="w-full my-0 mx-auto"
+        src={previewSrc}
+        alt={alt}
+        className="w-full my-0 mx-auto"
       />
     </div>
     </>
-    
   )
 }
