@@ -1,7 +1,7 @@
 {
   "hosting": {
     "target": "documentation",
-    "public": "out",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -12,6 +12,17 @@
       {
         "source": "/**", 
         "dynamicLinks": true
+      }
+    ],
+    "headers": [
+      {
+        "source": "/images/**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
       }
     ]
   }

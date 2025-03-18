@@ -45,17 +45,18 @@ export function MarketingAsset ({src, alt, layout, title}) {
 
   const downloadAsset = async () => {
     try {
-      // Ensure we have a valid URL by using URL constructor
-      const fileUrl = new URL(src.replace('preview', 'full'), window.location.origin).toString();
+      // Don't modify the src URL - use it directly
+      const fileUrl = src;
       
-      // Log the URL we're trying to fetch (for debugging)
       console.log('Attempting to download:', fileUrl);
       
       const response = await fetch(fileUrl, {
         method: 'GET',
         headers: {
-          'Accept': 'application/pdf, image/*',  // Accept both PDFs and images
+          'Accept': 'application/pdf, image/*',
         },
+        // Add credentials if needed
+        credentials: 'same-origin'
       });
 
       if (!response.ok) {
@@ -63,7 +64,7 @@ export function MarketingAsset ({src, alt, layout, title}) {
       }
       
       const blob = await response.blob();
-      const fileName = src.split('/').pop(); // Get filename from path
+      const fileName = src.split('/').pop();
       
       saveAs(blob, fileName);
     } catch (error) {
