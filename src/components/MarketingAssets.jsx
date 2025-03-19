@@ -72,12 +72,22 @@ export function MarketingAsset ({src, alt, layout, title}) {
       alert('Sorry, there was an error downloading the file. Please try again later.');
     }
   }
+
+  const handleClick = () => {
+    if (isPDF) {
+      // Open PDF in new tab
+      window.open(src, '_blank', 'noopener,noreferrer');
+    } else {
+      // Keep existing download logic for non-PDFs
+      downloadAsset();
+    }
+  }
   
   return (
     <>
     <div className={containerClasses}>
-      <button onClick={downloadAsset} className={btnClasses}>
-        Download {isPDF ? 'PDF' : ''}
+      <button onClick={handleClick} className={btnClasses}>
+        {isPDF ? 'View PDF' : 'Download'}
       </button>
       <img
         src={previewSrc}
