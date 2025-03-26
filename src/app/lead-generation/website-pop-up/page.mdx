@@ -14,33 +14,33 @@ export const metadata = {
 
 <HeroPattern />
 
-# Website Pop-up
+# Website Popup
 
-The **Website Pop-up** is a lead generation tool that can be added to any website to collect buyer leads. It allows visitors to sign up as contacts, search for properties, and optionally provide their phone numbers. All signups require email verification to ensure accuracy.
+The **Website Popup** is a lead generation tool that can be added to any website to collect buyer leads. It allows visitors to sign up as contacts, search for properties, and optionally provide their phone numbers. All signups require email verification to ensure accuracy.
 
-This feature is available exclusively for premium users and can be fully customized to match your website’s design. Anyone who signs up through the pop-up will receive a **daily email summary of "Coming Soon" listings** that your team has access to.
+This feature is available exclusively for premium users and can be fully customized to match your website's design. Anyone who signs up through the pop-up will receive a **daily email summary of "Coming Soon" listings** that your team has access to.
 
 <Screenshot 
   src="/images/screenshots/popup-example.png"
-  alt="Example of the FirstList Website Pop-up"
-  caption='You can view a working example of the FirstList Website Pop-up on our <a href="https://www.firstlist.co/popup-example" target="_blank">example page</a>.'
+  alt="Example of the FirstList Website Popup"
+  caption='You can view a working example of the FirstList Website Popup on our <a href="https://www.firstlist.co/popup-example" target="_blank">example page</a>.'
 />
 
-## Add the Pop-up to Your Website
+## Add the Popup to Your Website
 
 1. <a href="https://app.firstlist.co/login" target="_blank">Login</a> to your FirstList account.
 2. Navigate to the **Settings** page.
 3. Ensure you are subscribed to the **Premium** plan.
-4. Find the **Website Pop-up** tab.
+4. Find the **Website Popup** tab.
 4. Copy the embed code.
 5. Paste the embed code into the HTML of your website.
-6. Configure the pop-up using the **Basic Configuration** section below.
+6. Configure the popup using the **Basic Configuration** section below.
 
 ## How It Works
 
 1. **Visitors sign up** by providing their name and email.
 2. **They receive an email to verify their email address.**
-3. **After verification**, they receive a confirmation email with details about their subscription to your team’s daily “Coming Soon” email, along with an option to complete their signup and create a property search.
+3. **After verification**, they receive a confirmation email with details about their subscription to your team's daily "Coming Soon" email, along with an option to complete their signup and create a property search.
 4. **They begin receiving daily listing summaries**, featuring "Coming Soon" properties your team has access to. Each email includes a call to action to reach out to you or adjust their search criteria.
 5. **All new signups are automatically added as contacts** in your FirstList account.
 
@@ -49,12 +49,22 @@ This feature is available exclusively for premium users and can be fully customi
 ```javascript
 window.popupConfig = {
   apiKey: "your-api-key-here",    // Required
-  position: "left",               // Optional
-  timeDelay: 2,                  // Optional
+  position: "right",              // Optional
+  timeDelay: 2,                   // Optional
   widgetType: "WidgetComingSoon", // Optional
-  initialText: "Coming Soon Listings", // Optional
-  footerText: "I agree to be contacted by email.", // Optional
-  googleFont: "Poppins"          // Optional
+  initialText: "Get Early Access", // Optional
+  footerText: "I agree to be contacted by <team name> via email.", // Optional
+  googleFont: "Poppins",          // Optional
+  styles: {                       // Optional styling configuration
+    roundedSize: 5,               // Border radius for corners
+    backgroundColor: "#ffffff",    // Background color of the widget
+    fontColor: "#1d1d1d",         // Main text color
+    buttonColor: "#1d1d1d",       // Color of buttons
+    errorColor: "#1d1d1d",        // Color of error messages
+    buttonHoverColor: "#000000",  // Button color on hover
+    buttonTextColor: "#ffffff",   // Color of text in buttons
+    borderColor: "#E4E4E4"        // Color of input field borders
+  }
 };
 ```
 
@@ -66,9 +76,22 @@ window.popupConfig = {
 | `position` | String | `"right"` | Widget position on screen (`"left"` or `"right"`) |
 | `timeDelay` | Number | `2` | Delay in seconds before widget appears |
 | `widgetType` | String | `"WidgetComingSoon"` | Type of widget to display |
-| `initialText` | String | `"Coming Soon Listings"` | Text displayed on the initial button |
-| `footerText` | String | `"I agree to be contacted by email."` | Text displayed in the footer |
+| `initialText` | String | `"Get Early Access"` | Text displayed on the initial button |
+| `footerText` | String | `"I agree to be contacted by <team name> via email."` | Text displayed in the footer |
 | `googleFont` | String | `"Poppins"` | Google Font to use throughout the widget |
+
+### Style Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `roundedSize` | Number | `5` | Size of border radius in pixels |
+| `backgroundColor` | String | `"#ffffff"` | Background color of the widget |
+| `fontColor` | String | `"#1d1d1d"` | Color of the main text |
+| `buttonColor` | String | `"#1d1d1d"` | Color of the buttons |
+| `errorColor` | String | `"#1d1d1d"` | Color of error messages |
+| `buttonHoverColor` | String | `"#000000"` | Color of buttons when hovered |
+| `buttonTextColor` | String | `"#ffffff"` | Color of text within buttons |
+| `borderColor` | String | `"#E4E4E4"` | Color of input field borders |
 
 ## Implementation Example
 
@@ -88,20 +111,18 @@ Here's a complete example of how to implement and configure the widget:
             position: "right",
             timeDelay: 2,
             widgetType: "WidgetComingSoon",
-            initialText: "Coming Soon Listings",
-            footerText: "I agree to be contacted by email.",
+            initialText: "Get Early Access",
+            footerText: "I agree to be contacted by <team name> via email.",
             googleFont: "Poppins",
             styles: {
-                roundedSize: 15,
-                backgroundColor: "#564ae4",
-                fontColor: "#ffffff",
-                footerColor: "#ffffff",
-                buttonColor: "#ffffff",
-                accentColor: "#3c35c5",
-                errorColor: "#df0000",
-                buttonHoverColor: "#594EE5",
-                buttonTextColor: "#000000",
-                borderColor: "#CCC"
+                roundedSize: 5,
+                backgroundColor: "#ffffff",
+                fontColor: "#1d1d1d",
+                buttonColor: "#1d1d1d",
+                errorColor: "#1d1d1d",
+                buttonHoverColor: "#000000",
+                buttonTextColor: "#ffffff",
+                borderColor: "#E4E4E4"
             }
         };
     </script>
@@ -118,3 +139,4 @@ Here's a complete example of how to implement and configure the widget:
 - The `apiKey` is required for the widget to function
 - Make sure to include the widget script after the configuration
 - The Google Font specified must be available in the Google Fonts library
+- Replace `<team name>` in the `footerText` with your actual team name
