@@ -48,50 +48,59 @@ This feature is available exclusively for premium users and can be fully customi
 
 ```javascript
 window.popupConfig = {
-  apiKey: "your-api-key-here",    // Required
-  position: "right",              // Optional
-  timeDelay: 2,                   // Optional
-  widgetType: "WidgetComingSoon", // Optional
-  initialText: "Get Early Access", // Optional
-  footerText: "I agree to be contacted by <team name> via email.", // Optional
-  googleFont: "Poppins",          // Optional
-  styles: {                       // Optional styling configuration
-    roundedSize: 5,               // Border radius for corners
-    backgroundColor: "#ffffff",    // Background color of the widget
-    fontColor: "#1d1d1d",         // Main text color
-    buttonColor: "#1d1d1d",       // Color of buttons
-    errorColor: "#1d1d1d",        // Color of error messages
-    buttonHoverColor: "#000000",  // Button color on hover
-    buttonTextColor: "#ffffff",   // Color of text in buttons
-    borderColor: "#E4E4E4"        // Color of input field borders
+  apiKey: "28de96c0-c6bc-42ff-8a97-4c880933337c",  // Required – your public API key to authenticate the widget
+  position: "right",                               // Optional – position of the widget on screen: "left" or "right"
+  timeDelay: 2,                                    // Optional – delay (in seconds) before the widget appears
+  widgetType: 'WidgetComingSoon',                  // Optional – widget type (e.g. 'WidgetComingSoon', 'WidgetBetaSignup')
+  titleText: '',                                   // Optional – custom title displayed in the widget
+  footerText: '',                                  // Optional – footer note or disclaimer at the bottom
+  initialCTAText: 'Get Early Access',              // Optional – call-to-action text shown initially
+  buttonText: '',                                  // Optional – text inside the submission button
+  googleFont: "Helvetica Neue",                    // Optional – Google Font or system font to apply
+
+  styles: {                                        // Optional – visual customization for widget appearance
+    roundedSize: 15,                               // Border radius for corners (in pixels)
+    backgroundColor: "#ffffff",                    // Main background color of the widget
+    fontColor: "#000000",                          // Color of the main text
+    footerColor: "#808080",                        // Color of the footer text
+    buttonBackgroundColor: "#000000",              // Background color of the CTA button
+    initialBackgroundColor: "#ffffff",             // Background color before user interaction (e.g. popup phase)
+    errorColor: "#df0000",                         // Color of error messages and validation prompts
+    buttonHoverColor: "#1b1b1b",                   // Background color of button when hovered
+    buttonTextColor: "#ffffff",                    // Text color inside the button
+    borderColor: "#D1D5DB"                         // Border color for input fields or widget edges
   }
 };
 ```
 
 ### Core Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `apiKey` | String | Required | Your unique API key for the popup |
-| `position` | String | `"right"` | Widget position on screen (`"left"` or `"right"`) |
-| `timeDelay` | Number | `2` | Delay in seconds before widget appears |
-| `widgetType` | String | `"WidgetComingSoon"` | Type of widget to display |
-| `initialText` | String | `"Get Early Access"` | Text displayed on the initial button |
-| `footerText` | String | `"I agree to be contacted by <team name> via email."` | Text displayed in the footer |
-| `googleFont` | String | `"Poppins"` | Google Font to use throughout the widget |
+| Option           | Type   | Default                                                  | Description                                                  |
+|------------------|--------|----------------------------------------------------------|--------------------------------------------------------------|
+| `apiKey`         | String | Required                                                 | Your unique API key for the popup                            |
+| `position`       | String | `"right"`                                                | Widget position on screen (`"left"` or `"right"`)            |
+| `timeDelay`      | Number | `2`                                                      | Delay in seconds before widget appears                       |
+| `widgetType`     | String | `"WidgetComingSoon"`                                     | Type of widget to display                                    |
+| `titleText`      | String | `null`                                                   | Optional override for widget title                           |
+| `footerText`     | String | `"I agree to be contacted by <team name> via email."`    | Text displayed in the footer                                 |
+| `initialCTAText` | String | `"Get Early Access"`                                     | Text displayed on the initial call-to-action button          |
+| `buttonText`     | String | `""`                                                     | Text displayed on the submit button                          |
+| `googleFont`     | String | `"Poppins"`                                              | Google Font to use throughout the widget                     |
 
 ### Style Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `roundedSize` | Number | `5` | Size of border radius in pixels |
-| `backgroundColor` | String | `"#ffffff"` | Background color of the widget |
-| `fontColor` | String | `"#1d1d1d"` | Color of the main text |
-| `buttonColor` | String | `"#1d1d1d"` | Color of the buttons |
-| `errorColor` | String | `"#1d1d1d"` | Color of error messages |
-| `buttonHoverColor` | String | `"#000000"` | Color of buttons when hovered |
-| `buttonTextColor` | String | `"#ffffff"` | Color of text within buttons |
-| `borderColor` | String | `"#E4E4E4"` | Color of input field borders |
+| Option                   | Type   | Default     | Description                                              |
+|--------------------------|--------|-------------|----------------------------------------------------------|
+| `roundedSize`            | Number | `5`         | Size of border radius in pixels                          |
+| `backgroundColor`        | String | `"#ffffff"` | Background color of the widget                           |
+| `initialBackgroundColor` | String | `"#ffffff"` | Background color before user interaction                 |
+| `fontColor`              | String | `"#1d1d1d"` | Color of the main text                                   |
+| `footerColor`            | String | `"#808080"` | Color of the footer text                                 |
+| `buttonBackgroundColor`  | String | `"#1d1d1d"` | Background color of the buttons                          |
+| `buttonHoverColor`       | String | `"#000000"` | Color of buttons when hovered                            |
+| `buttonTextColor`        | String | `"#ffffff"` | Color of text within buttons                             |
+| `errorColor`             | String | `"#df0000"` | Color of error messages                                  |
+| `borderColor`            | String | `"#E4E4E4"` | Color of input field borders                             |
 
 ## Implementation Example
 
@@ -106,25 +115,29 @@ Here's a complete example of how to implement and configure the widget:
 <body>
     <!-- Widget Configuration -->
     <script>
-        window.popupConfig = {
-            apiKey: "your-api-key-here",
-            position: "right",
-            timeDelay: 2,
-            widgetType: "WidgetComingSoon",
-            initialText: "Get Early Access",
-            footerText: "I agree to be contacted by <team name> via email.",
-            googleFont: "Poppins",
-            styles: {
-                roundedSize: 5,
-                backgroundColor: "#ffffff",
-                fontColor: "#1d1d1d",
-                buttonColor: "#1d1d1d",
-                errorColor: "#1d1d1d",
-                buttonHoverColor: "#000000",
-                buttonTextColor: "#ffffff",
-                borderColor: "#E4E4E4"
-            }
-        };
+      window.popupConfig = {
+        apiKey: "your-api-key-here",
+        position: "right",
+        timeDelay: 2,
+        widgetType: "WidgetComingSoon",
+        titleText: "Access listings 72 hours before they go public",
+        initialCTAText: "Get Early Access",
+        buttonText: "Sign Up",
+        footerText: "I agree to be contacted by <team name> via email.",
+        googleFont: "Poppins",
+        styles: {
+          roundedSize: 5,
+          backgroundColor: "#ffffff",
+          initialBackgroundColor: "#ffffff",
+          fontColor: "#1d1d1d",
+          footerColor: "#808080",
+          buttonBackgroundColor: "#1d1d1d",
+          buttonHoverColor: "#000000",
+          buttonTextColor: "#ffffff",
+          errorColor: "#df0000",
+          borderColor: "#E4E4E4"
+        }
+      };
     </script>
     
     <!-- Widget Script -->
