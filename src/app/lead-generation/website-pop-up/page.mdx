@@ -75,7 +75,9 @@ window.popupConfig = {
     errorColor: "#df0000",                         // Color of error messages and validation prompts
     buttonHoverColor: "#1b1b1b",                   // Background color of button when hovered
     buttonTextColor: "#ffffff",                    // Text color inside the button
-    borderColor: "#D1D5DB"                         // Border color for input fields or widget edges
+    borderColor: "#D1D5DB",                        // Border color for input fields or widget edges
+    paddingSides: "10px",                          // Horizontal spacing from screen edges (left & right)
+    paddingBottom: "24px",                         // Distance from the bottom of the screen
   }
 };
 ```
@@ -108,6 +110,8 @@ window.popupConfig = {
 | `buttonTextColor`        | String | `"#ffffff"` | Color of text within buttons                             |
 | `errorColor`             | String | `"#df0000"` | Color of error messages                                  |
 | `borderColor`            | String | `"#E4E4E4"` | Color of input field borders                             |
+| `paddingSides`           | String | `"10px"`    | Horizontal spacing from screen edges (left & right)      |
+| `paddingBottom`          | String | `"24px"`    | Distance from the bottom of the screen                   |
 
 ## Implementation Example
 
@@ -142,7 +146,9 @@ Here's a complete example of how to implement and configure the widget:
           buttonHoverColor: "#000000",
           buttonTextColor: "#ffffff",
           errorColor: "#df0000",
-          borderColor: "#E4E4E4"
+          borderColor: "#E4E4E4",
+          paddingSides: "10px",
+          paddingBottom: "24px",
         }
       };
     </script>
